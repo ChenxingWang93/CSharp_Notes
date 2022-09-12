@@ -1,4 +1,4 @@
-## Welcome to C#
+### 1. Welcome to C#
 ### 2. Working with variables, operators, and expressions 变量、运算符、表达式
 ### 3. Writing methods and applying scope 书写方法✍️、应用范围
 ### 4. Using decision statements 决策语句
