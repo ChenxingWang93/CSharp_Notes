@@ -5,9 +5,9 @@
 > Text is a quote
 ##### 2.2 declare a variable and give it an initial value 声明一个变量并赋予一个初始值
 > Text is a quote
-##### 2.3 declare a value
+##### 2.3 Change the value of a variable 改变一个变量的值
 > Text is a quote
-##### 2.4 declare a value
+##### 2.4 
 > Text is a quote
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
