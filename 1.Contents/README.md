@@ -19,6 +19,17 @@
 > double dPI = double.Parse(strPI);
 > int thirdteen = int.Parse(strThirdteen);
 > ```
+##### 2.6 Override the precedence of an operator 覆盖运算符的优先级
+> compute the value inside of the bracket
+> ```C#
+> (1 + 2) * 3
+> ```
+##### 2.7 Assign the same value to several variables 给多个变量赋相同的值
+> the value is passed from right to left 赋值方向👈👈👈
+> ```C#
+> int myInt4, myInt3, myInt2, myInt1, myInt0;
+> 
+> ```
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
 #### 4. Using decision statements 决策语句
