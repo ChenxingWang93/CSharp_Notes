@@ -7,7 +7,7 @@
 > Text is a quote
 ##### 2.3 Change the value of a variable 改变一个变量的值
 > Text is a quote
-##### 2.4 
+##### 2.4 generate a string
 > Text is a quote
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
