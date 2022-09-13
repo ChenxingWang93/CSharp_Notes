@@ -28,10 +28,39 @@
 > the value is passed from right to left 赋值方向👈👈👈
 > ```C#
 > int myInt4, myInt3, myInt2, myInt1, myInt0;
-> 
+> myInt4 = myInt3 = myInt2 = myInt1 = myInt0 = 10;
 > ```
+##### 2.8 Increment or decrement a variables 增加或减少一个变量
+> using `++` or `--`
+> 
+> e.g. `count++`
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
+##### 3.1 Declare a method 声明一种方式
+> write inside the class
+> ```C#
+> [return type] [method name] (data_type value1, data_type value2)
+> {
+>   /**/
+> }
+> ```
+> e.g:
+> ```C#
+> int addValue (int topFace, int bottomFace) 
+> {
+>   /**/
+> }
+> ```
+
+##### 3.2 Return a value from within a method 从方法从回传一个值
+> use keyword `return`
+> ```C#
+> int addValue (int topFace, int bottomFace) 
+> {
+>   return topFace + bottomFace;
+> }
+> ```
+
 #### 4. Using decision statements 决策语句
 #### 5. Using compound assignment and iteration statements 复合赋值与迭代语句
 #### 6. Managing errors and exceptions 管理错误与异常
