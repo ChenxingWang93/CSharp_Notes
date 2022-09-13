@@ -60,6 +60,11 @@
 >   return topFace + bottomFace;
 > }
 > ```
+> even though you dont have to include a `return` at the end of a `void` function, it is suggested to do so, since every method is supposed to return something. `void` method `return` void.
+> ```
+> 
+> ```
+
 
 #### 4. Using decision statements 决策语句
 #### 5. Using compound assignment and iteration statements 复合赋值与迭代语句
