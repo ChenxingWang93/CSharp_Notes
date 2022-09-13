@@ -1,14 +1,24 @@
 ### VISUAL C# AND VISUAL STUDIO INTRO
 #### 1. Welcome to C#
 #### 2. Working with variables, operators, and expressions 变量、运算符、表达式
-##### 2.1 declare a variable 声明一个变量
-> Text is a quote
-##### 2.2 declare a variable and give it an initial value 声明一个变量并赋予一个初始值
-> Text is a quote
+##### 2.1 Declare a variable 声明一个变量
+> Text is a set to be deleted
+##### 2.2 Declare a variable and give it an initial value 声明一个变量并赋予一个初始值
+> Text is a set to be deleted
 ##### 2.3 Change the value of a variable 改变一个变量的值
-> Text is a quote
-##### 2.4 generate a string
-> Text is a quote
+> Text is a set to be deleted
+##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
+> 
+##### 2.5 Convert a `string` to an `int/double` 
+> Using `System.Int32.Parse` or `System.Double.Parse`
+> 
+> 简言之 `int.Parse`and `double.Parse`
+> ```C#
+> string strPI = "3.14159";
+> string strThirdteen = "13";
+> double dPI = double.Parse(strPI);
+> int thirdteen = int.Parse(strThirdteen);
+> ```
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
 #### 4. Using decision statements 决策语句
