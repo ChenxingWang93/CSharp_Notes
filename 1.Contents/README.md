@@ -92,7 +92,7 @@
 >   Console.WriteLine("0"); // √
 >   Console.WriteLine("1"); // √
 >   return;
->   Console.WriteLine("2"); // ✖️      
+>   Console.WriteLine("2"); // ✖️
 > }
 > ```
 ##### 3.5 define an expression bodied method 定义一种表达式bodied方法
@@ -177,10 +177,22 @@
 > ```C#
 > outOfRange = (number < lo) || (hi < number);
 > ```
+##### 4.6 `if` statement
+> in short(not recommend): ❌
+> ```C#
+> if (inRange)
+>   process();
+> ```
+> in short(not recommend): ✔️
+> ```C#
+> if (inRange)
+> {
+>   process;
+> }
+> ```
 
-
-
-
+##### 4.7 `switch` statement
+> 
 
 #### 5. Using compound assignment and iteration statements 复合赋值与迭代语句
 #### 6. Managing errors and exceptions 管理错误与异常
