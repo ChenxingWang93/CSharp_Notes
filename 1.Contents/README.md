@@ -60,13 +60,128 @@
 >   return topFace + bottomFace;
 > }
 > ```
-> even though you dont have to include a `return` at the end of a `void` function, it is suggested to do so, since every method is supposed to return something. `void` method `return` void.
-> ```
-> 
+> even though you dont have to include a `return` at the end of a `void` function, it is suggested to do so, since every method is supposed to be return something. `void` method `return` void.
+> ```C#
+> public void Method()
+> {
+>   //something supposed to be return
+>   return;
+> }
 > ```
 
+##### 3.3 Return multiple values from within a method 在一个方法中回传多个值
+> return multiple values as a tuple 以多元组的形式回传多个值
+> ```C#
+> (int min, int max) FindMinMax(int[] input)
+> {
+>   //finding min and max
+>   return (min, max);
+> }
+> ```
+> The returned multiple values function can be used like this: 回传多个值的函数能被这样使用
+> ```C#
+> var input = new[] {-9, 0, 67,100};
+> var (minimum, maximum) = FindMinMax(input);
+> ```
+
+##### 3.4 Return from a method before the end of the method 在一个方法结束前回传一个方法
+> block ends at where `return` is 
+> ```C#
+> void PrintSomething()
+> {
+>   Console.WriteLine("0"); // √
+>   Console.WriteLine("1"); // √
+>   return;
+>   Console.WriteLine("2"); // ✖️      
+> }
+> ```
+##### 3.5 define an expression bodied method 定义一种表达式bodied方法
+> 简言之 replace`{}` and `return` with `=>`
+> ```C#
+> double CalculateStrength(double strengthtoWeight, int weight)
+> {
+>   return strengthtoWeight * weight
+> }
+> ```
+> it will be like 
+> ```C#
+> double CalculateStrength(double strengthtoWeight, int weight) => strengthtoWeight * weight
+> ```
+##### 3.6 call a method call 一个方法
+> be like `methodName(args0, args1, args2, ...);`
+> ```C#
+> addValues(1, 1);
+> ```
+##### 3.7 Use the Generate Method Stub Wizard 方法存根向导
+##### 3.8 Create a nested method (method in method) 创建一个nested 
+> obviously there is a method `strength` inside the method `CalculateStrength`
+> ```C#
+> long CalculateStrength(string input)
+> {
+>   /**/
+>   long strength(int dataValue)
+>   {
+>     if (dataValue == 1)
+>     {
+>       return 1;
+>     } 
+>     else
+>     {
+>       return dataValue * strength(dataValue - 1);
+>     }
+>   }
+> }
+> ```
+##### 3.9 display the debug toolbar
+> View -> Toolbar - Debug
+
+##### 3.10 Step into a method 
+##### 3.11 Step out of a method 
+##### 3.12 Specify an optional parameter to a method 为方法指定可选参数
+> ```C#
+> void optMethod(int first, double second 1.0, string third ="Hello")
+> {
+>   /**/
+> }
+> ```
+##### 3.13 Pass a method argument as a named 
+> Since you already have some default argument, you don't have to assign it again...
+> ```C#
+> optMethod(second: 1.0, third:"Hello");
+> ```
+> you can skip assign the value for `second`
 
 #### 4. Using decision statements 决策语句
+##### 4.1 `==`，`!=` determine equivalent
+> ```C#
+> thisYear == 2022
+> ```
+##### 4.2 `>`，`>=`, `<`, `<=` compare the value of two expressions
+> ```C#
+> bool flag = 2 > 1;
+> ```
+
+##### 4.3 Declare a Boolean variable
+> ```C#
+> bool isOdd;
+> ```
+
+##### 4.4 `AND` 
+> use `&&`
+> ```C#
+> inRange = (lo <= number) && (number <= hi);
+> ```
+
+##### 4.5 `or` 
+> use `||`
+> ```C#
+> outOfRange = (number < lo) || (hi < number);
+> ```
+
+
+
+
+
 #### 5. Using compound assignment and iteration statements 复合赋值与迭代语句
 #### 6. Managing errors and exceptions 管理错误与异常
 
