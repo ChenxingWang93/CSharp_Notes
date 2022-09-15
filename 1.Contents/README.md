@@ -223,10 +223,58 @@
 > if there are multiple variables on the right hand side.Dont recommend using this shortcut
 
 ##### 5.2 `while`loop
-> while
+> `while` something is `true`, do some jobs
+> ```C#
+> int i = 0;
+> while(i < 10)
+> {
+>   Console.WriteLine(i);
+>   i++; //dont forget to increment the condition!
+> }
+> ```
 
+##### 5.3 `for`loop `for` 循环♻️
+> ```C#
+> for (int i = 0; i < 10; i++)
+> {
+>   Console.WriteLine(i);
+> }
+> ```
+> you can also iterate backward and increment base on value bigger than 1 向后➖以及➕大于1的值
+> for (int i = 10; i > 0; i--)
+> {
+>   //do some jobs
+> }
+> for (i = 0; i < 10; i+=2)
+> {
+>   //do some jobs
+> }
+
+##### 5.4 `do-while`loop `do-while` 循环♻️
+> the difference between `do-while` loop and `while` loop is that: `do-while` loop iterate at least once.
+> ```C#
+> int i = 0;
+> do
+> {
+>   Console.WriteLine(i);
+>   i++;
+> }
+> while(i < 10);
+> ```
 
 #### 6. Managing errors and exceptions 管理错误与异常
+> ##### 6.1 Catch a specific exception 捕捉特定异常
+> if you want to catch specific exception, you have to specify the type of exception 
+> ```C#
+> try
+> {
+>   //do some jobs...
+> }
+> catch(FormatException fEx)
+> {
+>   //do some jobs...
+> }
+> ```
 
 ### THE C# OBJECT MODEL
 #### 7. Creating and managing classes and objects 创建与管理类、与对象
