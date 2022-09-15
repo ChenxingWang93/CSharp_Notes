@@ -132,7 +132,7 @@
 >   }
 > }
 > ```
-##### 3.9 display the debug toolbar
+##### 3.9 display the debug toolbar 展示debug🔧
 > View -> Toolbar - Debug
 
 ##### 3.10 Step into a method 
@@ -144,7 +144,7 @@
 >   /**/
 > }
 > ```
-##### 3.13 Pass a method argument as a named 
+##### 3.13 Pass a method argument as a named 传递一个method arg作为命名
 > Since you already have some default argument, you don't have to assign it again...
 > ```C#
 > optMethod(second: 1.0, third:"Hello");
@@ -156,12 +156,12 @@
 > ```C#
 > thisYear == 2022
 > ```
-##### 4.2 `>`，`>=`, `<`, `<=` compare the value of two expressions
+##### 4.2 `>`，`>=`, `<`, `<=` compare the value of two expressions 对比两个表达式的数值
 > ```C#
 > bool flag = 2 > 1;
 > ```
 
-##### 4.3 Declare a Boolean variable
+##### 4.3 Declare a Boolean variable 声明一个布尔运算变量
 > ```C#
 > bool isOdd;
 > ```
@@ -177,7 +177,7 @@
 > ```C#
 > outOfRange = (number < lo) || (hi < number);
 > ```
-##### 4.6 `if` statement
+##### 4.6 `if` statement `if`声明
 > in short(not recommend): ❌
 > ```C#
 > if (inRange)
@@ -191,10 +191,41 @@
 > }
 > ```
 
-##### 4.7 `switch` statement
-> 
+##### 4.7 `switch` statement `switch`声明
+> which is like a gate, which controls the output
+> ```C#
+> int choice;
+> switch(choice)
+> {
+>     case 0:
+>         //do some jobs(if choice== 0)
+>         break;
+>     case 1:
+>         //do some jobs(if choice== 1)
+>         break;
+>     default:
+>         //do some jobs(if (choice !== 0 && choice !== 1))
+>         break;
+> }
+> ```
+> tips: always remember to leave `default` value
 
-#### 5. Using compound assignment and iteration statements 复合赋值与迭代语句
+
+#### 5. Using compound assignment and iteration statements 使用复合赋值与迭代语句
+##### 5.1 What the hell is compound assignment? 什么是复合赋值？
+> it is a shortcut for arithmetic operation and assignment 算数🧮操作和赋值的捷径
+> ```C#
+> variable += 1; //equivalent to variable = variable + 1;
+> variable -= 1; //equivalent to variable = variable - 1;
+> variable *= 1; //equivalent to variable = variable * 1;
+> variable /= 1; //equivalent to variable = variable / 1;
+> ```
+> if there are multiple variables on the right hand side.Dont recommend using this shortcut
+
+##### 5.2 `while`loop
+> while
+
+
 #### 6. Managing errors and exceptions 管理错误与异常
 
 ### THE C# OBJECT MODEL
