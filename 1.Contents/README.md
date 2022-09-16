@@ -263,7 +263,7 @@
 > ```
 
 #### 6. Managing errors and exceptions 管理错误与异常
-> ##### 6.1 Catch a specific exception 捕捉特定异常
+##### 6.1 Catch a specific exception 捕捉特定异常
 > if you want to catch specific exception, you have to specify the type of exception 
 > ```C#
 > try
@@ -275,9 +275,76 @@
 >   //do some jobs...
 > }
 > ```
+##### 6.2 Use `checked` to prevent overflow 防止溢出
+> this is very handy in arithmetic computation for it prevent overflow 在算术🧮计算中防止溢出
+> ```C#
+> int number = Int32.MaxValue; //看不懂🤷‍♂️
+> checked {number++}; // in this case, the overflow error will be caught 在这个情况下溢出的cuo wucuowu
+> ```
+##### 6.3 Throw an exception 抛出一个异常
+> use `throw` keyword 使用`throw`关键词
+> ```C#
+> throw new FormatException(source);
+> ```
+##### 6.4 Ensure code will always run even though with an exception 确保代码运行即便出现异常
+> this is very handy 
+> ```C#
+> try
+> {
+>   //do some jobs...
+> }
+> finally 
+> {
+>   //this part will be running no matter there is an exception above or not 
+> }
+> ```
+
 
 ### THE C# OBJECT MODEL
 #### 7. Creating and managing classes and objects 创建与管理类、与对象
+##### 7.1 Declare a `class` 声明一个类
+> ```C#
+> class className
+> {
+>   //...  
+> }
+> ```
+
+##### 7.2 Declare a `constructor` 声明一个构造器
+> write a method its name is the same as the name of the class, and it has no return type
+> ```C#
+> class Point
+> {
+>   //..place the field at here
+>   public Point(int x, int y)
+>   {
+>       //...
+>   }
+> }
+> ```
+
+##### 7.3 Call a `constructor` call一个构造器
+> Use the new keyword and specify the constructor with appropriate set of parameters
+> ```C#
+> Point origin = new Point(10, 10);
+> ```
+
+##### 7.4 Declare a `static` method 声明一个静态方式
+> Use the `static` keyword; a `static` method is that you can call this method without initializing an instance of this class. 静态方法意味着你可以call这个方法而无需初始化这个类的实例instance
+> ```C#
+> class Point
+> {
+>   //...
+>   public static int ObjectCount()
+>   {
+>       //...
+>   }
+> }
+> ```
+
+##### 7.5 Call a `static` method call一个静态方法
+> call a `static` method, e.g.[ClassName].[staticMethodName]
+
 #### 8. Understanding values and references 了解🫡值与引用
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
 #### 10. Using arrays 阵列
