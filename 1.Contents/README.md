@@ -371,8 +371,10 @@
 > }
 > ```
 
-
 #### 8. Understanding values and references 了解🫡值与引用
+##### 8.1 copy a value type variable
+
+
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
 #### 10. Using arrays 阵列
 #### 11. Understanding parameter arrays 参数阵列
