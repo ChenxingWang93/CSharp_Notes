@@ -300,7 +300,7 @@
 > ```
 
 
-### THE C# OBJECT MODEL
+### THE C# OBJECT MODEL 对象模型
 #### 7. Creating and managing classes and objects 创建与管理类、与对象
 ##### 7.1 Declare a `class` 声明一个类
 > ```C#
@@ -344,6 +344,33 @@
 
 ##### 7.5 Call a `static` method call一个静态方法
 > call a `static` method, e.g.[ClassName].[staticMethodName]
+> ```C#
+> int pointCreatedSoFar = Point.ObjectCount();
+> ```
+
+##### 7.6 Declare and acess a `static` field
+> ```C#
+> class Point
+> { 
+>   //...
+>   public static int ObjectCount;
+> }
+> ```
+> and you can acess the static field by invoke directly
+> ```C#
+> int num = Point.ObjectCount;
+> ```
+
+##### 7.7 Declare a `const` field
+> `const` is a constant value 是一个constant 类型值
+> ```C#
+> class Math
+> {
+>   //...
+>   public const double PI = 3.14159;
+> }
+> ```
+
 
 #### 8. Understanding values and references 了解🫡值与引用
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
