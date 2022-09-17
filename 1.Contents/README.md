@@ -372,7 +372,21 @@
 > ```
 
 #### 8. Understanding values and references 了解🫡值与引用
-##### 8.1 copy a value type variable
+##### 8.1 copy a value type variable 复制一个值类型变量
+> when you copy value type
+> ```C#
+> int i = 13;
+> int copyi = i;
+> i++; //above change won't affect `copyi`
+> ```
+
+##### 8.2 copy a reference type variable 复制一个引用类型的变量, reference type variable which dont store the actual value, rather the reference of the value
+> when you copy a reference type, you actually copied the `reference` of the variable 
+> ```C#
+> Curve arcCrv = new Curve();
+> Curve crv = arcCrv;
+> arcCrv.translate(); // not only translate `arcCrv` but also `crv`
+> ```
 
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
