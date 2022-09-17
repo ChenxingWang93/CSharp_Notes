@@ -406,7 +406,7 @@
 > ```
 > although the function `doIncrement` is a `void` function which returns nothing, we should keep eye on `ref` keyword. in this case, the `i` was incremented. 空函数回传🈳，存在关键词`ref`，使 `i` 增加
 
-##### 8.5
+##### 8.5 pass an argument to an out parameter
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
 #### 10. Using arrays 阵列
