@@ -388,6 +388,24 @@
 > arcCrv.translate(); // not only translate `arcCrv` but also `crv`
 > ```
 
+##### 8.3 declare a variable that can hold a value type or the `null` value 声明一个变量持有 值的类型或者 `null`值
+> use `？` modifier
+> ```C#
+> int? i = null;
+> ```
+
+##### 8.4 pass a argument to a `ref` parameter 传递一个args 到`ref`参数
+> the keyword `ref` simply implies that the change will affect itself
+> ```C#
+> static void doIncrement(ref int number)
+> {
+>   number++
+> }
+> int i = 42;
+> doIncrement(ref i)  //i is incremented 
+> ```
+> although the function doIncrement is a void function which returns nothing,
+
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
 #### 10. Using arrays 阵列
