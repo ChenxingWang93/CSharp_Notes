@@ -407,10 +407,46 @@
 > although the function `doIncrement` is a `void` function which returns nothing, we should keep eye on `ref` keyword. in this case, the `i` was incremented. 空函数回传🈳，存在关键词`ref`，使 `i` 增加
 
 ##### 8.5 pass an argument to an `out` parameter 传递一个argument 到一个`out`参数
-> it is very similar to `ref` keyword, the way to perceive this is that wherever you see `out`
+> it is very similar to `ref` keyword, the way to perceive this is that wherever you see `out` 
 > it is a decoration for output, you have to prepare something for output.
 > ```C#
-> 
+> using System.Linq;
+> static void duplicateTenTimes(int i, out List<int> duplicatedList)
+> {
+>     duplicatedList = Enumerable.Repeat(i, 10).ToList();
+> }
+> List<int>tenDuplicate = new List<int>();
+> duplicateTenTimes(10, out tenDuplicate); //at this point, the `tenDuplicate` has 10 copies of 10.
+> ```
+##### 8.6 Box and unbox a value 📦一个值
+> `box` is a way of wrapping anything to a generic type, in this case we use `object`
+> ```C#
+> object o = 42;  
+> ```
+> retrospectively, you can see `unbox` as way casting the generic type to specific type 
+> int i = (int)o;  
+  
+##### 8.8 cast an object safely 安全地铸造一个对象
+> 1. first choice, use `is` keyword to check if the cast success 
+> ```C#
+> WrappedInt wi = new WrappedInt();
+> //...
+> object o = wi;
+> if (o is WrappedInt temp)
+> {
+>   //...  
+> }  
+> ```
+> 2. second choice, use `as` to perform the cast, and check if it is `null`
+> ```C#
+> WrappedInt wi = new WrappedInt();
+> //...
+> object o = wi;
+> WrappedInt temp = o as WrappedInt;
+> if (temp != null)
+> {
+>    //...
+> }
 > ```
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
