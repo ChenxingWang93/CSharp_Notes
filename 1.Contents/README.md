@@ -450,9 +450,45 @@
 > ```
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
-bear in mind, the biggest difference between struct
+bear in mind, the biggest difference between `struct` and `class` is that: **Structs are value type whereas Classes are reference type.** `struct`：值类型、`class`：参考类型
 ##### 9.1 declare an enumeration 声明一个枚举
+> use the `enum` keyword => name of this `enum` => enumeration **literal** name
+> ```C#
+> enum Fruits{🍉，🥭，🍎，🍌，🍐，🥝}；  
+> ```  
+##### 9.2 declare a enumeration variable 声明一个枚举变量
+> ```C#
+> Fruits tropicalFruit;  
+> ``` 
+##### 9.3 declare a enumeration variable 赋一个枚举变量 一个值
+> tropicalFruit = 🥭; // error! the compiler cant detect what `🥭` is semantically
+> tropicalFruit = Fruits.🥭; // √
+  
+##### 9.4 declare a structure type 声明一个结构类型
+> use the keyword `struct` => the name of the `struct` => the body of the `struct`(the constructors, methods, and fields).[similar to class]
+> ```C#
+> struct Point3d
+> {
+>   internal double _x, _y, _z;
+>   public Point3d(double x, double y, double z)
+>   {
+>       this._x = x;
+>       this._y = y;
+>       this._z = z;  
+>   }  
+> }  
+> ```
 
+##### 9.5 declare a structure variable 声明一个结构化变量
+> ```C#
+> Point3d pt;  
+> ```
+  
+##### 9.6 initialize a stucture variable to a value 初始化一个结构化变量并赋值
+> similar to `class`
+> ```C#
+> Point3d = new Point3d(0, 1, 2);  
+> ```  
 #### 10. Using arrays 阵列
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
