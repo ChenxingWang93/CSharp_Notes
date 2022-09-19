@@ -450,6 +450,9 @@
 > ```
 
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
+bear in mind, the biggest difference between struct
+##### 9.1 declare an enumeration 声明一个枚举
+
 #### 10. Using arrays 阵列
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
