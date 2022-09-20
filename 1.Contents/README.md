@@ -496,18 +496,67 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 >   
 ##### 10.1 declare an array variable 声明一个 `array` 变量
 > [data_type][name_of_array];
+> ```C# 
 > bool [] flags;
-  
-##### 10.2 **create an instance** of an array 创建数组的实例
-> when you create an instance, you have to explicitly define the amount of the array.
+> ``` 
+##### 10.2 **create an instance** of an array **创建**数组的**实例**
+> when you create an instance, you have to explicitly define the amount of the array. 当你创建一个实例，需要明确地定义数组的数量
+> ```C#  
 > bool [] flags = new bool[10];
-##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值
-> when you initialize the array, you have to assign specific values
-##### 10.4 find how many elements in an array 找到数组中的元素
+> ``` 
+##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值 
+> when you initialize the array, you have to assign specific values 初始化数组🔢，赋特定的值
+> ```C#   
+> int [] numPI = {3, 1, 4, 1, 5, 9};
+> ```  
+  
+##### 10.4 find how many elements in an array 找到数组中元素的数量
+> use `Length` property
+> ```  
+> int[] numPI = {3, 1, 4, 1, 5, 9};
+> int numPIAmount = numPI.Length; // here we got 6
+> ```  
+  
 ##### 10.5 access a single array element 访问数组中的一个单一元素
+> use the `[]` to access particular element 访问特定元素
+> ```C#   
+> int num = numPIAmount[2]; // we got 4
+> ```  
 ##### 10.6 loop over an array 循环一个数组
+> use `for` loop or `foreach` loop
+> ```C#   
+> bool [] flags = {true, false, true, false};
+> for (int i = 0; i < flags.Length; i++)
+> {
+>     Console.WriteLine(flags[i]);  
+> }                              
+> foreach (bool flag in flags)
+> {
+>     Console.WriteLine(flag);  
+> }
+> ```  
 ##### 10.7 declare a **multidimensional array** variable 初始化元素数组声明值
-##### 10.8 declare a **jagged array** variable   
+> declare a **multidimensional array** variable 声明一个**多维数组**变量
+> ```C#   
+> use this `[,]`
+> int [,] table;  
+> table = new int[4, 6]; //initialize an 4*6 array
+> ```  
+##### 10.8 declare a **jagged array** variable
+> use this `[][]`
+> ```C#
+> int[][] items;
+> items = new int[4][];
+> items[0] = new int[3];
+> items[1] = new int[10];
+> items[2] = new int[40];
+> items[3] = new int[25];
+> ```
+the difference between _multidimensional array_ and _jagged array_ is that the 
+_multidimensional array_ is like a **square** with anything aligned.
+_jagged array_ is like zig-zag no symmetric shape.
+> ```C#
+> ```  
   
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
