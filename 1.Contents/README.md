@@ -490,6 +490,10 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > Point3d = new Point3d(0, 1, 2);  
 > ```  
 #### 10. Using arrays 阵列
+> what is the biggest difference between Array and List
+> 
+> 
+> 
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
