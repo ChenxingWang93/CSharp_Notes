@@ -499,7 +499,10 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > bool [] flags;
   
 ##### 10.2 **create an instance** of an array 创建数组的实例
+> when you create an instance, you have to explicitly define the amount of the array.
+> bool [] flags = new bool[10];
 ##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值
+> when you initialize the array, you have to assign specific values
 ##### 10.4 find how many elements in an array 找到数组中的元素
 ##### 10.5 access a single array element 访问数组中的一个单一元素
 ##### 10.6 loop over an array 循环一个数组
