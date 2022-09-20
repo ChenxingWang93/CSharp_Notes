@@ -461,9 +461,11 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > Fruits tropicalFruit;  
 > ``` 
 ##### 9.3 declare a enumeration variable 赋一个枚举变量 一个值
-> tropicalFruit = 🥭; // error! the compiler cant detect what `🥭` is semantically
-> tropicalFruit = Fruits.🥭; // √
-  
+> ```C#
+> tropicalFruit = 🥭;  // error! the compiler cant detect what `🥭` is semantically
+> tropicalFruit = Fruits.🥭;  // √
+> ``` 
+
 ##### 9.4 declare a structure type 声明一个结构类型
 > use the keyword `struct` => the name of the `struct` => the body of the `struct`(the constructors, methods, and fields).[similar to class]
 > ```C#
