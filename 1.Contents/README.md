@@ -490,10 +490,20 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > Point3d = new Point3d(0, 1, 2);  
 > ```  
 #### 10. Using arrays 阵列
-> what is the biggest difference between Array and List
-> 
-> 
-> 
+> what is the biggest difference between `Array` and `List`? `Array` is fixed size once it is initialized.`List` is dynamic, you can either `add` or`remove`items from it. 
+>   
+##### 10.1 declare an array variable 声明一个 `array` 变量
+> [data_type][name_of_array];
+> bool [] flags;
+  
+##### 10.2 **create an instance** of an array 创建数组的实例
+##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值
+##### 10.4 find how many elements in an array 找到数组中的元素
+##### 10.5 access a single array element 访问数组中的一个单一元素
+##### 10.6 loop over an array 循环一个数组
+##### 10.7 declare a **multidimensional array** variable 初始化元素数组声明值
+##### 10.8 declare a **jagged array** variable   
+  
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
