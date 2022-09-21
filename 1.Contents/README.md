@@ -556,6 +556,10 @@ the difference between _multidimensional array_ and _jagged array_ is that the
 _multidimensional array_ is like a **square** with anything aligned.
 _jagged array_ is like zig-zag no symmetric shape.
 > ```C#
+> public class ArrayHolder
+> {
+>     int[,] multi
+> }
 > ```  
   
 #### 11. Understanding parameter arrays 参数阵列
