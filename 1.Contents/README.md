@@ -561,7 +561,19 @@ _jagged array_ is like zig-zag no symmetric shape.
 >     int[,] multi
 > }
 > ```
-the difference between multidimensional array
+the difference between **multidimensional array** and **jagged array** is that 
+**multidimensional array** is like a `square` with all element aligned.
+**jagged array ** is like zig-zag `non-symmetric shape`.
+> ```C#
+> public class ArrayHolder
+> {
+>     int[,] = multiDimArray = {{},
+>                               {},
+>                               {},
+>                               {},  
+>                              };  
+> }  
+> ```  
   
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
