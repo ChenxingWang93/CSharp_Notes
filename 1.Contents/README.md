@@ -560,7 +560,8 @@ _jagged array_ is like zig-zag no symmetric shape.
 > {
 >     int[,] multi
 > }
-> ```  
+> ```
+the difference between multidimensional array
   
 #### 11. Understanding parameter arrays 参数阵列
 #### 12. Working with inheritance 继承
