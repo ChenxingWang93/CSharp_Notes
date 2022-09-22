@@ -512,7 +512,7 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
   
 ##### 10.4 find how many elements in an array 找到数组中元素的数量
 > use `Length` property
-> ```  
+> ```C#  
 > int[] numPI = {3, 1, 4, 1, 5, 9};
 > int numPIAmount = numPI.Length; // here we got 6
 > ```  
@@ -581,7 +581,51 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```  
   
 #### 11. Understanding parameter arrays 参数阵列
-> By using the params
+> By using the `params` keyword, we can specify a method parameter that takes a variable number of argument.
+> however, the parameter type must be a single-dimensional array.
+> ```C#
+> public class MyClass
+> {
+>     public static void IntParams(params int[] list) //with `params` keyword, the length of array can be dynamic
+>     {
+>         for (int i = 0; i < list.Length; i++)
+>         {
+>             Console.Write(list[i] + " ");    
+>         }
+>         Console.WriteLine();  
+>     }
+>     public static void objParams(params object[] list)
+>     {
+>         for (int i = 0; i < list.Length; i++)
+>         {
+>             Console.Write(list[i] + " ");  
+>         }
+>         Console.WriteLine();    
+>     }
+>     
+>     static void Main()
+>     {
+>         //output: 1 2 3 4
+>         //output: 1 a test
+>         //output: a blank line
+>         //output: 5 6 7 8 9
+>         //output: 2 b best again
+>         //output: error!!! no output!!!
+>         //output: System.Int32[]  
+>     }  
+> }  
+> ``` 
+> /*
+> 
+> Output:
+>     1 2 3 4
+>     1 a test
+>
+>     5 6 7 8 9
+>     2 b best again
+>     System.Int32[]  
+> */
+>   
 #### 12. Working with inheritance 继承
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
