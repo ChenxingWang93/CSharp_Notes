@@ -606,12 +606,25 @@ the difference between **multidimensional array** and **jagged array** is that
 >     static void Main()
 >     {
 >         //output: 1 2 3 4
+>         IntParams(1, 2, 3, 4);
+>
 >         //output: 1 a test
+>         objParams(1, 'a', "test");
+>
 >         //output: a blank line
+>         objParams();
+>         
 >         //output: 5 6 7 8 9
+>         int[] myIntArray = {5, 6, 7, 8, 9};
+>
 >         //output: 2 b best again
+>         object[] myObjArray = {2, 'b', "best", "again" };
+>         
 >         //output: error!!! no output!!!
->         //output: System.Int32[]  
+>         IntParams(myObjArray); //this cannot be compiled
+>           
+>         //output: System.Int32[]
+>         ObjParams(myIntArray); //no error, the entire integer array become the 1st element of the params array.
 >     }  
 > }  
 > ``` 
@@ -625,7 +638,8 @@ the difference between **multidimensional array** and **jagged array** is that
 >     2 b best again
 >     System.Int32[]  
 > */
->   
+>
+
 #### 12. Working with inheritance 继承
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
