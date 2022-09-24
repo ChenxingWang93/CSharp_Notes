@@ -664,7 +664,22 @@ the difference between **multidimensional array** and **jagged array** is that
 > remember:
 > `virtual` in the `base` class
 > `override` in the `derived` class 
->   
+> ```C#
+> class Mammal 
+> {
+>     public virtual void Breathe()
+>     {
+>     }
+> }
+> class Monkey: Mammal
+> {
+>     public override void Breathe()
+>     {
+>         //override the breathe method rather than using the general breathe 
+>     }
+>         //...
+> }
+> ```
 
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
