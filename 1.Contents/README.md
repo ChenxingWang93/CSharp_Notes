@@ -660,7 +660,11 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //then you dont need to write the code here, leave it blank  
 > }  
 > ```
-##### 12.2 declare a virtual method in the base class and override it in the derived class
+##### 12.2 declare a `virtual` method in the `base` class and `override` it in the `derived` class
+> remember:
+> `virtual` in the `base` class
+> `override` in the `derived` class 
+>   
 
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
