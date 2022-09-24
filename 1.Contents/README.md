@@ -642,7 +642,24 @@ the difference between **multidimensional array** and **jagged array** is that
 
 #### 12. Working with inheritance 继承
 ##### 12.1 createa derived class from a base class 从基类创建派生类
-> use the colon :
+> use the colon `:`
+> ```C#
+> class BaseClass
+> {
+>     public BaseClass(int x, int y)
+>     {
+>         //ctor...    
+>     }    
+> }
+> class DerivedClass : BaseClass
+> {
+>         public DerivedClass(int x, int y) : base(x, y)
+>         {
+>         }
+>         //if you want to inherit the constructor from the BaseClass,
+>         //then you dont need to write the code here, leave it blank  
+> }  
+> ```  
 
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
