@@ -641,6 +641,9 @@ the difference between **multidimensional array** and **jagged array** is that
 >
 
 #### 12. Working with inheritance 继承
+##### 12.1 createa derived class from a base class 从基类创建派生类
+> use the colon :
+
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
 
