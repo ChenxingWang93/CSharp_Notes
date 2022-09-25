@@ -581,7 +581,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```  
   
 #### 11. Understanding parameter arrays 参数阵列
-> By using the `params` keyword, we can specify a method parameter that takes a variable number of argument.
+> By using the `params` keyword, we can specify a method parameter that takes a variable number of argument. 使用 关键词`params` 声明一个方法参数
 > however, the parameter type must be a single-dimensional array.
 > ```C#
 > public class MyClass
@@ -660,7 +660,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //then you dont need to write the code here, leave it blank  
 > }  
 > ```
-##### 12.2 declare a `virtual` method in the `base` class and `override` it in the `derived` class
+##### 12.2 declare a `virtual` method in the `base` class and `override` it in the `derived` class 在基类中声明一个虚拟方法 并且 在衍生类中重写
 > remember:
 > `virtual` in the `base` class
 > `override` in the `derived` class 
@@ -675,16 +675,122 @@ the difference between **multidimensional array** and **jagged array** is that
 > {
 >     public override void Breathe()
 >     {
->         //override the breathe method rather than using the general breathe 覆盖方法而不使用通用 
+>         //override the breathe method rather than using the general breathe **覆盖方法**而不使用**通用**
 >     }
 >         //...
 > }
 > ```
+##### 12.3 define an extension method for a type 为一种类型定义一个`扩展方法` 
+> what is `extension method`❓ 
+> it is the `.` method you use everyday. like `.Select()`, `.ToString()`, `.OrderBy()`.
+>  
+> in summary, the `extension method` is a **static method** which `extends` some sort of method invoked by the dot `.`
+>  
+> for example, we can write our own `countStringLength` method by decorating the **variable** with `this`.
+>  
+> what is `this` keyword❓
+>  
+> the `this` keyword refers to the **current instance of the class** and it is also a modifier of the first parameter of an extension method.
+> ```C#
+> namespace ExtensionMethods
+> {
+>     static class Util
+>     {
+>         public static int Negate(this int i)
+>         {
+>                 return -i;  
+>         }  
+>     }  
+> }  
+> ```
+> as you can see `this String str` is decorated with `this`, which means the variable can be the current instance of the class!!
+> ```C#  
+> Using ExtensionMethods; //bring the Extension method here
+> //...
+> int ten = 10;
+> int nine = ten.Negate(); //we can use `.Negate()` method without writing this method inside a class!!
+> ```  
 
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
-#### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
+##### the concept of `interface` is a little bit similar to `.header` file in C++, which is **a must for such class to implement it**
+##### 13.1 declare an interface 声明一个界面
+> use `interface` keyword
+> ```C#
+> interface IDemo
+> {
+>     string GetName();
+>         string GetDescription();  
+> }  
+> ```
+##### 13.2 Implement an interface 实现一个界面
+> implement the class to fulfill interface **explicitly** 实现一个类以明确地实现接口
+> ```C#
+> class Test : IDemo
+> {
+>     public string IDemo.GetName()
+>     {
+>         //...  
+>     }
+>     public string IDemo.GetDescription()
+>     {
+>         //...  
+>     }  
+> }
+> ```
+> implement the class to fulfill interface **implicitly** 实现类以含蓄地实现接口
+> ```C#
+> class Test : IDemo
+> {
+>     public string GetName()
+>     {
+>         //...  
+>     }
+>     public string GetDescription()
+>     {
+>         //...  
+>     }  
+> }  
+> ```
+##### 13.3 `abstract` class which **can only be a base class** 抽象类只能成为基类
+> use the abstract keyword. **you cannot create an instance from an abstract class**
+> then, what is the point to create an `abstract` class? ❓
+> it means to be **a template**. for instance, you define a class call `Felidae`, but `Felidae` should be treated as a family of mammals! There is no such instance of `Felidae` 一个模版，例如，定义一个**Felidae**类，但是**Felidae** 不能被当作**mammals**的族，不能出现`Felidae`这样的**实例**
+> ```C#
+> abstract class Felidae
+> {
+>     //...
+>     public virtual void Sound();  
+> }  
+> public class Cat : Felidae
+> {
+>     //...
+>     public override void Sound();
+>     {
+>         Console.WriteLine("Meow");  
+>     }  
+> }
+> ```
+##### 13.4 a `sealed` class that `cannot be a base class `
+> sealed class Horse 
+> {
+>     //...  
+> }  
 
-### EXTENSIBLE TYPES WITH C#
+#### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
+##### 14.1 Write a destructor
+> use the `~` prefix. the method of destructor cannot have access modifier!(like `public`)
+> ```C#
+> class Example
+> {
+>     //...
+>     ~Example()
+>     {
+>     }  
+> }  
+> ```
+##### 14.2  
+  
+### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
