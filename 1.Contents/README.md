@@ -796,7 +796,40 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 ##### 14.4 release a resource at a known point in time 在已知⌚️释放资源
 > ⚠️ cons: this is at the risk of resource leaks if an exception interrupts the execution 如果异常中断执行则存在资源泄漏的风险
-> how to do it? => write a disposal method
+> how to do it? => write a **disposal method** (a method that disposes of a resource) and **call it explicitly** from the program 写一个**处理方法**
+> (处理资源的方法),显式调用它
+> ```C#
+> class TextReader
+> {
+>     //...
+>     public virtual void Close()
+>     {
+>         //write the disposal method here  
+>     }
+> }
+> class Example
+> {
+>     void Use()
+>     {
+>         TextReader reader = ...;
+>  
+>         reader.Close(); //call it explicitly to dispose a resource call显式处理一个资源  
+>     }  
+> }  
+> ```
+##### 14.5 support exception-safe disposal in a class 在类中支持异常安全🔐处理
+> that said, to implement the `IDisposable` interface
+> ```C#
+> class SafeResource : IDisposable
+> {
+>         //...
+>     public void Dispose()
+>     {
+>     //Dispose resource here  
+>     }  
+> }  
+> ```
+##### 14.6  
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
