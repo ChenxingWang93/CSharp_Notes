@@ -790,7 +790,13 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 ##### 14.2 call the destructor is invalid 
 > you cannot call a destructor, only the garbage collector can call a destructor.
-##### 14.3 ❌  
+##### 14.3 ❌ force garbage collection(not recommended) 
+> ```C#
+> GC.Collect
+> ```
+##### 14.4 release a resource at a known point in time 在已知⌚️释放资源
+> ⚠️ cons: this is at the risk of resource leaks if an exception interrupts the execution 如果异常中断执行则存在资源泄漏的风险
+> how to do it? => write a disposal method
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
