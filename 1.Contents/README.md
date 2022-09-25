@@ -675,7 +675,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > {
 >     public override void Breathe()
 >     {
->         //override the breathe method rather than using the general breathe 
+>         //override the breathe method rather than using the general breathe 覆盖方法而不使用通用 
 >     }
 >         //...
 > }
