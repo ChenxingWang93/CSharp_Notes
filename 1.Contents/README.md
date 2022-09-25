@@ -788,7 +788,9 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
-##### 14.2  
+##### 14.2 call the destructor is invalid 
+> you cannot call a destructor, only the garbage collector can call a destructor.
+##### 14.3 ❌  
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
