@@ -829,7 +829,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
-##### 14.6  
+##### 14.6 implement exception-safe disposal for an object that implements the IDisposable interface
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
