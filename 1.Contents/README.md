@@ -817,7 +817,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
-##### 14.5 support exception-safe disposal in a class 在类中支持异常安全🔐处理
+##### 14.5 support exception-safe disposal in a class 在类中支持异常-安全🔐处理
 > that said, to implement the `IDisposable` interface
 > ```C#
 > class SafeResource : IDisposable
@@ -829,7 +829,8 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
-##### 14.6 implement exception-safe disposal for an object that implements the IDisposable interface
+##### 14.6 implement exception-safe disposal for an object that implements the `IDisposable` interface 实现 异常-安全🔐 处理 对象实施 `IDisposable`接口
+> 🌟 this is the recommended option in garbage collection 垃圾收集
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
