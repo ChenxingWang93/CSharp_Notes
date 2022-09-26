@@ -331,7 +331,7 @@
 
 ##### 7.4 Declare a `static` method 声明一个静态方式 
 > Use the `static` keyword; a `static` method is that you can call this method without initializing an instance of this class. 静态方法意味着你可以call这个方法而无需初始化这个类的实例instance
-> static sequence: the number of item does not change but the actual item might 
+> `static` sequence interface: the number of item does not change but the actual items might 
 > ```C#
 > class Point
 > {
