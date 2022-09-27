@@ -852,6 +852,7 @@ the difference between **multidimensional array** and **jagged array** is that
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
+> big picture: the design of property in C# is to inherit the get()
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
 #### 18. Using collections 使用集合 
