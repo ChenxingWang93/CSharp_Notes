@@ -863,7 +863,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > property with only `get` keyword is **read-only**
 > property with only `set` keyword is **write-only**
   
-##### 15.2  
+##### 15.2 declare a property in an interface
 
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
