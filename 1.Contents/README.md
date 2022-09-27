@@ -863,7 +863,16 @@ the difference between **multidimensional array** and **jagged array** is that
 > property with only `get` keyword is **read-only**
 > property with only `set` keyword is **write-only**
   
-##### 15.2 declare a property in an interface
+##### 15.2 declare a property in an `interface` 在 `interface` 中声明一个属性
+> write down the `get` and `set`
+> ```C#
+> interface IScreenPosition
+> {
+>     int X { get; set; };
+>     int Y { get; set; };  
+> }  
+> ```
+>   
 
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
