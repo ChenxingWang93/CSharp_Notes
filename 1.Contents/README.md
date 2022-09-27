@@ -9,7 +9,7 @@
 > Text is a set to be deleted
 ##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
 > 
-##### 2.5 Convert a `string` to an `int/double` 
+##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
 > 
 > 简言之 `int.Parse`and `double.Parse`
@@ -60,7 +60,7 @@
 >   return topFace + bottomFace;
 > }
 > ```
-> even though you dont have to include a `return` at the end of a `void` function, it is suggested to do so, since every method is supposed to be return something. `void` method `return` void.
+> even though you dont have to include a `return` at the end of a `void` function, it is suggested to do so, since every method is supposed to be return something. `void` method `return` void. 虽然在 `void` 函数结束后 不需要包含一个 `return`，还是建议这么做，因为每个方法都会回传 something，`void`方法 回传 void 
 > ```C#
 > public void Method()
 > {
@@ -789,9 +789,9 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
-##### 14.2 call the destructor is invalid 
-> you cannot call a destructor, only the garbage collector can call a destructor.
-##### 14.3 ❌ force garbage collection(not recommended) 
+##### 14.2 call the destructor is invalid 不能call一个destructor
+> you cannot call a destructor, only the garbage collector can call a destructor. 只有垃圾回收♻️才能call 一个destructor
+##### 14.3 ❌ force garbage collection(not recommended) 不建议 强制垃圾垃圾回收
 > ```C#
 > GC.Collect
 > ```
@@ -819,7 +819,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 ##### 14.5 support exception-safe disposal in a class 在类中支持异常-安全🔐处理
-> that said, to implement the `IDisposable` interface
+> that said, to implement the `IDisposable` interface 
 > ```C#
 > class SafeResource : IDisposable
 > {
@@ -831,7 +831,24 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 ##### 14.6 implement exception-safe disposal for an object that implements the `IDisposable` interface 实现 异常-安全🔐 处理 对象实施 `IDisposable`接口
-> 🌟 this is the recommended option in garbage collection 垃圾收集
+> 🌟 this is the recommended option in garbage collection 垃圾收集的建议选项
+> how to do it? => create the object in a `using` statement
+> define the `type` of that property with `get` and `set`
+> `get`: able to read
+> `set`: able to write 
+> ```C#
+> struct ScreenPosition
+> {
+>         //...
+>     public int X
+>     {
+>         get { ... } // or get => ...
+>         set { ... } // or set => ... 
+>     }
+>     //...  
+> }  
+> ```
+>   
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
 #### 15. Implementing properties to access fields 实现属性以访问字段
