@@ -832,7 +832,19 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 ##### 14.6 implement exception-safe disposal for an object that implements the `IDisposable` interface 实现 异常-安全🔐 处理 对象实施 `IDisposable`接口
 > 🌟 this is the recommended option in garbage collection 垃圾收集的建议选项
-> how to do it? => create the object in a `using` statement
+> how to do it? => create the object in a `using` statement 在 `using` 声明中创建一个对象
+> ```C#
+> using(SafeResource resource = new SafeResource())
+> {
+>     // use SafeResource here
+>     // ...  
+> }   
+> ```  
+  
+### EXTENSIBLE TYPES WITH C# C#的扩展类型
+#### 15. Implementing properties to access fields 实现属性以访问字段
+> big picture: the design of property in C# is to inherit the `get()` and `set()` method in C++, but in an efficient, elegant and safe way.
+##### 15.1 declare a read/write `property` for a structure or class 为structure 或 class 声明一个 读/写 `属性` 
 > define the `type` of that property with `get` and `set`
 > `get`: able to read
 > `set`: able to write 
@@ -848,11 +860,11 @@ the difference between **multidimensional array** and **jagged array** is that
 >     //...  
 > }  
 > ```
->   
+> property with only `get` keyword is **read-only**
+> property with only `set` keyword is **write-only**
   
-### EXTENSIBLE TYPES WITH C# C#的扩展类型
-#### 15. Implementing properties to access fields 实现属性以访问字段
-> big picture: the design of property in C# is to inherit the get()
+##### 15.2  
+
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
 #### 18. Using collections 使用集合 
