@@ -948,6 +948,7 @@ the difference between **multidimensional array** and **jagged array** is that
 
 ##### 16.3 create an indexer for a class or structure 为一个类或者结构创建一个索引器
 > use the keyword `this` and **square bracket** `[]`
+> ```C#
 > struct RawInt
 > {
 >     //...
@@ -958,9 +959,18 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }
 >     //...  
 > }
+> ```
 
 ##### 16.4 define an indexer in an interface and implement it 定义一个索引器在 接口 中并 实施 它
->   
+> define it: 定义
+> ```C#
+> interface IRawInt
+> {
+>         bool this [ int index ] { get; set; }
+> }
+> ```
+
+> implicitly
 #### 17. Introducing generics 范型
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
