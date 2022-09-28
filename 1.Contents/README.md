@@ -875,6 +875,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 > the class implemented the interface will look like this: 类实施的接口：
+> ```C#
 > struct ScreenPosition : IScreenPosition
 > {
 >     private int _x;
@@ -894,8 +895,33 @@ the difference between **multidimensional array** and **jagged array** is that
 >         set => this._y = value;
 >     }
 > }
+> ```  
 ##### 15.3 Create an automatic property 创建一个自动属性
-> in the class or structure that contains the property, define the property with empty get and set accessors
+> in the class or structure that contains the property, define the property with empty get and set accessors 在类或结构中包含属性，通过空的 `get`和 `set`附件定义属性
+> this is very handy feature!
+> ```C#
+> public class Customer
+> {
+>     public int Id { get; set; }
+>     public string FirstName { get; set; }
+>     public string LastName { get; set; }  
+> }
+> ```
+> now this class can be used as a sort of data container!!
+> ```C#  
+> var customerBob = new Customer
+> {
+>     Id = 1,
+>     FirstName = "Bob",
+>     LastName = "Smith"  
+> }
+> var customerDavid = new Customer
+> {
+>     Id = 3,
+>     FirstName = "David",
+>     LastName = "Rutten"  
+> }  
+> ```  
 
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
