@@ -1000,7 +1000,20 @@ the difference between **multidimensional array** and **jagged array** is that
 
 #### 17. Introducing generics 范型
 ##### 17.1 an object by using a generic type 
-> when you see <> ,
+> when you see `<>` , it means this is used in generic type
+> ```C#
+>   
+> ```
+> ```C#
+>   
+> ```
+  
+##### 17.2 create a new generic type 创建一个新的范型 
+##### 17.3
+##### 17.4
+##### 17.5
+##### 17.6
+##### 17.7  
 
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
