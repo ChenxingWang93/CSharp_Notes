@@ -924,6 +924,43 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```  
 
 #### 16. Using indexers 使用索引器
+> 🌟 big scope: what is the purpose of using indexer?
+> it aims to **deconstruct the integer to binary value**(`1/0` and `true/false`)which is very flexible!
+> 📌 fact: what are **integer**, **binary**, **hex**, etc?
+> we use `decimal system`十进制 in our life, e.g. "i am `29` years old", however the `hex`, `binary` are another form of representing numbers
+> `hexadecimal`十六进制 is 16-base. `binary`二进制 is 2-base.
+##### 16.1 specify an integer value using **binary** or **hexadecimal** notation 
+> `0b0` for **binary** values prefixes.
+> `0x0` for **hexadecimal** values prefixes.
+> include `_` separator to make values easier to read.
+> ```C#
+> unit moreBinData = 0b0_11110000_01011010_11001100_00001111;
+> unit moreHexData = 0x0_F0_5A_CC_0F;  
+> ```  
+##### 16.2 display an integer value as its binary or hexadecimal representation 以 **二进制** 或 **十六进制** 显示整数类型值
+> use the `Convert.ToString()` method, and specify 2(for binary) or 16(for hexadecimal) as the number base.
+> ```C#
+> unit moreHexData = 0x0_F0_5A_CC_0F;
+> Console.WriteLine($"{moreHexData, 2}")  
+> // display 0b0_11110000_01011010_11001100_00001111
+> // therefore the value of `0b0_11110000_01011010_11001100_00001111` and `0x0_F0_5A_CC_0F` are the same yet in different base.
+> ``` 
+
+##### 16.3 create an indexer for a class or structure 为一个类或者结构创建一个索引器
+> use the keyword `this` and **square bracket** `[]`
+> struct RawInt
+> {
+>     //...
+>     public bool this [ int index ]
+>     {
+>         get { ... }
+>         set { ... }  
+>     }
+>     //...  
+> }
+
+##### 16.4 define an indexer in an interface and implement it 定义一个索引器在 接口 中并 实施 它
+>   
 #### 17. Introducing generics 范型
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
