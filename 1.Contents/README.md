@@ -999,6 +999,9 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 
 #### 17. Introducing generics 范型
+##### 17.1 an object by using a generic type 
+> when you see <> ,
+
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
