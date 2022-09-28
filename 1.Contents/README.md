@@ -872,7 +872,28 @@ the difference between **multidimensional array** and **jagged array** is that
 >     int Y { get; set; };  
 > }  
 > ```
->   
+> the class implemented the interface will look like this: 类实施的接口：
+> struct ScreenPosition : IScreenPosition
+> {
+>     private int _x;
+>     private int _y;
+>     public int X
+>     {     
+>         //read
+>         get => this._x;
+>         //write
+>         set => this._x = value;
+>     }
+>     public int Y
+>     {
+>         //read
+>         get => this._y;
+>         //write
+>         set => this._y = value;
+>     }
+> }
+##### 15.3 Create an automatic property 创建一个自动属性
+> in the class or structure that contains the property, define the property with empty get and set accessors
 
 #### 16. Using indexers 使用索引器
 #### 17. Introducing generics 范型
