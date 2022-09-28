@@ -962,7 +962,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 
 ##### 16.4 define an indexer in an interface and implement it 定义一个索引器在 接口 中并 实施 它
-> define it: 定义
+> define it: 定义ta
 > ```C#
 > interface IRawInt
 > {
@@ -970,7 +970,34 @@ the difference between **multidimensional array** and **jagged array** is that
 > }
 > ```
 
-> implicitly
+> implicitly implement it: 含蓄地实施ta
+> ```C#
+> struct RawInt : IRawInt
+> {
+>     //...
+>     public bool this [ int index ]
+>     {
+>         get { ... }
+>         set { ... }  
+>     }
+>     //...  
+> }  
+> ```
+
+> explicitly implement it: 明确地实施ta
+> ```C#
+> struct RawInt : IRawInt
+> {
+>     //...
+>     bool IRawInt.this [ int index ]
+>     {
+>         get { ... }
+>         set { ... }  
+>     }
+>     //...  
+> }  
+> ```
+
 #### 17. Introducing generics 范型
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
