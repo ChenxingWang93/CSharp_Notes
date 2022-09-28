@@ -241,6 +241,7 @@
 > }
 > ```
 > you can also iterate backward and increment base on value bigger than 1 向后➖以及➕大于1的值
+> ```C#
 > for (int i = 10; i > 0; i--)
 > {
 >   //do some jobs
@@ -249,6 +250,7 @@
 > {
 >   //do some jobs
 > }
+> ```
 
 ##### 5.4 `do-while`loop `do-while` 循环♻️
 > the difference between `do-while` loop and `while` loop is that: `do-while` loop iterate at least once.
