@@ -1000,7 +1000,7 @@ the difference between **multidimensional array** and **jagged array** is that
 
 #### 17. Introducing generics 范型
 ##### 17.1 Instantiate an object by using a generic type 通过使用范型实例化一个对象
-> when you see `<>` , it means this is used in generic type 在范型中使用
+> when you see `<>` , it means this is used in generic type `<>` 意味着在范型中使用
 > ```C#
 > Queue<int> myQueue1 = new Queue<int>();
 > Queue<double> myQueue2 = new Queue<double>();
@@ -1009,17 +1009,72 @@ the difference between **multidimensional array** and **jagged array** is that
 > List<double> myList2 = new List<double>();
 > List<string> myList3 = new List<string>();
 > ```
+> as you can see, the `Queue` can contain `int`, `double`, and `string` etc. that is the design of `Queue` and `List`
+> 🌟 `T` was used to notate **generic** type  
 > ```C#
-> as you can see, the Queue
+> public class Queue<T> : IEnumerable<T>, ICollection, IEnumerable
+> {
+>     //...  
+> }
+> public class List<T> : IList<T>, ICollection<T>, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>, IEnumerable<T>, IEnumerable
+> {
+>     //...  
+> }
 > ```
   
 ##### 17.2 create a new generic type 创建一个新的范型 
-##### 17.3
-##### 17.4
-##### 17.5
-##### 17.6
-##### 17.7  
-
+##### 17.3 🌟**Restrict** the **type** that can be substituted for the **generic** type parameter 限制能被 替换成 范型的参数
+> it means that if you want to use this generic formwork, the data-type you set my implement something 意味着如果想要使用这个 范型，
+> the following means the `T` in the `Tree` must implement `IComparable<T>`
+> ```C#
+> public class Tree<T> where T : IComparable<T>
+> {
+>         //...  
+> }  
+> ```
+##### 17.4 define a generic method 定义一个 范型方法
+> put`<T>` before the `()`
+> ```C#  
+> static void InsertIntoTree<T>(Tree<T> tree, params T[] data)
+> {
+>     //...  
+> }
+> ```  
+  
+##### 17.5 invoke a generic method 范型 方法
+> to put the data type you use to replace the `T`
+> ```C#
+> InsertIntoTree<char>(charTree, `Z`, `X`);
+> ```  
+##### 17.6 define a **covariant** interface 定义一个 **协变** 接口
+> specify the `out` qualifier for covariant type parameter. Reference the covariant type parameters only as the return types from methods and not as
+> the types for method parameters: `协变` 类型参数。从 ☑️方法 中参考协变类型参数，而不是❌方法参数 
+> ```C#
+> interface IRetrieveWrapper <out T>
+> {
+>         T GetData();  
+> }  
+> ```
+##### 17.7 define a **contravariant** interface 定义一个 **逆变** 接口
+> specify the `in` qualifier for covariant type parameters. Reference the **contravariant** type parameters only as the types of method parameters and not as return types:
+> ```C#  
+> public interface IComparer<in T>
+> {
+>         int Compare(T x, T y);  
+> }    
+> ```
+> A note on `T`. here the `T` is literal symbol of `Generic`. what really does represent `Generic` is `< >`, see the following example:
+> ```C#
+> public class Tree<T>
+> {
+>         //...  
+> }
+> public class Tree<TItem>
+> {
+>         //...  
+> }  
+> ```
+they work as the same in functionality no matter use `T` or `TItem`. I personally prefer `T` for simplicity.  
 #### 18. Using collections 使用集合 
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
