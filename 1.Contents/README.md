@@ -999,13 +999,18 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```
 
 #### 17. Introducing generics 范型
-##### 17.1 an object by using a generic type 
-> when you see `<>` , it means this is used in generic type
+##### 17.1 Instantiate an object by using a generic type 通过使用范型实例化一个对象
+> when you see `<>` , it means this is used in generic type 在范型中使用
 > ```C#
->   
+> Queue<int> myQueue1 = new Queue<int>();
+> Queue<double> myQueue2 = new Queue<double>();
+> Queue<string> myQueue3 = new Queue<string>();
+> List<int> myList1 = new List<int>();
+> List<double> myList2 = new List<double>();
+> List<string> myList3 = new List<string>();
 > ```
 > ```C#
->   
+> as you can see, the Queue
 > ```
   
 ##### 17.2 create a new generic type 创建一个新的范型 
