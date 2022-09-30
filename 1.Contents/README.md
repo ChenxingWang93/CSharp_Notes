@@ -1074,8 +1074,9 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //...  
 > }  
 > ```
-they work as the same in functionality no matter use `T` or `TItem`. I personally prefer `T` for simplicity.  
-#### 18. Using collections 使用集合 
+they work as the same in functionality no matter use `T` or `TItem`. I personally prefer `T` for simplicity.
+#### 18. Using collections 使用集合
+> the   
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
