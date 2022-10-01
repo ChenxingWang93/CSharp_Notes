@@ -1116,6 +1116,14 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 
 ##### 18.4 find the number of elements in a collection 
 > /*the two same elements wont allowed to appear in **collection** */
+> use `Count`
+> ```C#
+> List<PlayingCard> cards = new List<PlayingCard>();
+> //...
+> int noOfCards = cards.Count;
+> ```
+
+
 
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
