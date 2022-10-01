@@ -1101,6 +1101,13 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > `Dequeue` is used in `Queue<T>`
 > `Pop` is used in `Stack<T>`
 > ```C#
+> HashSet<string> employees = new HashSet<string>();
+> //...
+> employees.Remove("John");
+>   
+> LinkedList<int> data = new LinkedList<int>();
+> //...
+>   
 > ```  
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
