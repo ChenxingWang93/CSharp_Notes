@@ -1123,6 +1123,9 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > int noOfCards = cards.Count;
 > ```
 
+##### 18.5 locate an item in a collection 在集合中定位一个物件
+> array notation
+
 
 
 #### 19. Enumerating collections 枚举集合
