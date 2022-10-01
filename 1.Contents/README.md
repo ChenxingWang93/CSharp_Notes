@@ -1139,13 +1139,51 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     public string Name { get; set; }
 >     public double Height { get; set; }  
 > }
+> ```
+
+> find the info in a list by `Find` using `System.Linq`
+> ```C#
+> List<Person> personnel = new List<Person>();
+> Person Simon = new Person{ ID = 3, Name = "Kobe Bryant", Height = 6'6' };
+> personnel.Add(Simon);
+> Person match = Personnel.Find(p => p.ID == 3); // there you go, you find Kobe by searching ID == 3
+> ```
+
+##### ⚠️⚠️⚠️ Note: The `Stack<T>`, `Queue<T>`, and `HashSet<T>` collection classes **DO NOT** support searching, although you can test for membership of an item in a hash set by using the `Contains` method.
+
+##### 18.6 iterate through the elements of a collection 迭代集合中的元素
+> use `for` or `foreach` statement to do so 
+> ```C#
+> LinkedList<int> numbers = new LinkedList<int>();
+> //...
+> for (LinkListNode<int> node = numbers.First; node != null; node = node.Next)  
+> {   
+>     int number = node.Value;
+>     Console.WriteLine(number);  
+> }
+> //...
+> foreach (int number in numbers)
+> {
+>     Console.WriteLine(number);  
+> }  
 > ```  
 
-
-
-
-
 #### 19. Enumerating collections 枚举集合
+##### 19.1 make class enumerable which support the `foreach` construct 使类可枚举并支持 `foreach` 构造
+> implement the `IEnumerable` interface and provide a `GetEnumerable` method that return an IEnumerator object 
+> public class Tree<T> :  IEnumerable<T>
+> {
+>     //...
+>     IEnumerable<T> GetEnumerable()
+>     {
+>     //...  
+>     }  
+>   
+> }
+##### 19.2 implement an enumerator without using an iterator 实施一个枚举器 without使用 一个迭代器
+> define a enumerator class that implements the `IEnumerable` interface, and that provide the `Current` property and the `MoveNext` method (and optionally the `Reset` method).
+>   
+  
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
 #### 22. Operator overloading 运算符重载
