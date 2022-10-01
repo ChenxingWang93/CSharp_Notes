@@ -1078,7 +1078,30 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 #### 18. Using collections 使用集合
 > the frequently used collections in C# are：
 ##### 18.1 create a new collection 创建一个新集合
-> use List<T>
+> use `List<T>` as an example 
+> ```C#
+> List<PlayingCard> cards = new List<PlayingCard>();
+> ```
+##### 18.2 add an item to a collection 添加一个物件到集合中
+> `List<T>` use `Add`
+> `HashSet<T>` use `Add`
+> `Dictionary<T, T>` use `Insert`
+> `Queue<T>` use `Enqueue`
+> `Stack<T>` use `Push`
+> ```C#
+> HashSet<string> employee = new HashSet<string>();
+> employee.Add("John");
+> LinkedList<int> data = new LinkedList<int>();
+> data.AddFirst(101);
+> Stack<int> numbers = new Stack<int>();
+> numbers.Push(99);
+> ```
+##### 18.3 remove an item from a collection 从一个集合中移除一个物件
+> `Remove` is used in `List<T>`, HashSet<T>, Dictionary<T, T>
+> `Dequeue` is used in `Queue<T>`
+> `Pop` is used in `Stack<T>`
+> ```C#
+> ```  
 #### 19. Enumerating collections 枚举集合
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
