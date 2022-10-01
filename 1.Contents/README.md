@@ -1,14 +1,23 @@
 ### VISUAL C# AND VISUAL STUDIO INTRO
+
 #### 1. Welcome to C#
+
+
+
 #### 2. Working with variables, operators, and expressions 变量、运算符、表达式
+
 ##### 2.1 Declare a variable 声明一个变量
 > Text is a set to be deleted
+
 ##### 2.2 Declare a variable and give it an initial value 声明一个变量并赋予一个初始值
 > Text is a set to be deleted
+
 ##### 2.3 Change the value of a variable 改变一个变量的值
 > Text is a set to be deleted
+
 ##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
 > 
+
 ##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
 > 
@@ -19,21 +28,26 @@
 > double dPI = double.Parse(strPI);
 > int thirdteen = int.Parse(strThirdteen);
 > ```
+
 ##### 2.6 Override the precedence of an operator 覆盖运算符的优先级
 > compute the value inside of the bracket
 > ```C#
 > (1 + 2) * 3
 > ```
+
 ##### 2.7 Assign the same value to several variables 给多个变量赋相同的值
 > the value is passed from right to left 赋值方向👈👈👈
 > ```C#
 > int myInt4, myInt3, myInt2, myInt1, myInt0;
 > myInt4 = myInt3 = myInt2 = myInt1 = myInt0 = 10;
 > ```
+
 ##### 2.8 Increment or decrement a variables 增加或减少一个变量
 > using `++` or `--`
 > 
 > e.g. `count++`
+
+
 
 #### 3. Writing methods and applying scope 书写方法✍️、应用范围
 ##### 3.1 Declare a method 声明一种方式
@@ -95,6 +109,7 @@
 >   Console.WriteLine("2"); // ✖️
 > }
 > ```
+
 ##### 3.5 define an expression bodied method 定义一种表达式bodied方法
 > 简言之 replace`{}` and `return` with `=>`
 > ```C#
@@ -112,6 +127,7 @@
 > ```C#
 > addValues(1, 1);
 > ```
+
 ##### 3.7 Use the Generate Method Stub Wizard 方法存根向导
 ##### 3.8 Create a nested method (method in method) 创建一个nested 
 > obviously there is a method `strength` inside the method `CalculateStrength`
@@ -132,6 +148,7 @@
 >   }
 > }
 > ```
+
 ##### 3.9 display the debug toolbar 展示debug🔧
 > View -> Toolbar - Debug
 
@@ -144,12 +161,15 @@
 >   /**/
 > }
 > ```
+
 ##### 3.13 Pass a method argument as a named 传递一个method arg作为命名
 > Since you already have some default argument, you don't have to assign it again...
 > ```C#
 > optMethod(second: 1.0, third:"Hello");
 > ```
 > you can skip assign the value for `second`
+
+
 
 #### 4. Using decision statements 决策语句
 ##### 4.1 `==`，`!=` determine equivalent
@@ -211,6 +231,7 @@
 > tips: always remember to leave `default` value
 
 
+
 #### 5. Using compound assignment and iteration statements 使用复合赋值与迭代语句
 ##### 5.1 What the hell is compound assignment? 什么是复合赋值？
 > it is a shortcut for arithmetic operation and assignment 算数🧮操作和赋值的捷径
@@ -264,6 +285,8 @@
 > while(i < 10);
 > ```
 
+
+
 #### 6. Managing errors and exceptions 管理错误与异常
 ##### 6.1 Catch a specific exception 捕捉特定异常
 > if you want to catch specific exception, you have to specify the type of exception 
@@ -277,17 +300,20 @@
 >   //do some jobs...
 > }
 > ```
+
 ##### 6.2 Use `checked` to prevent overflow 防止溢出
 > this is very handy in arithmetic computation for it prevent overflow 在算术🧮计算中防止溢出
 > ```C#
 > int number = Int32.MaxValue; //看不懂🤷‍♂️
 > checked {number++}; // in this case, the overflow error will be caught 在这个情况下溢出的cuo wucuowu
 > ```
+
 ##### 6.3 Throw an exception 抛出一个异常
 > use `throw` keyword 使用`throw`关键词
 > ```C#
 > throw new FormatException(source);
 > ```
+
 ##### 6.4 Ensure code will always run even though with an exception 确保代码运行即便出现异常
 > this is very handy 
 > ```C#
@@ -300,6 +326,7 @@
 >   //this part will be running no matter there is an exception above or not 
 > }
 > ```
+
 
 
 ### THE C# OBJECT MODEL 对象模型
@@ -374,6 +401,8 @@
 > }
 > ```
 
+
+
 #### 8. Understanding values and references 了解🫡值与引用
 ##### 8.1 copy a value type variable 复制一个值类型变量
 > when you copy value type
@@ -421,6 +450,7 @@
 > List<int>tenDuplicate = new List<int>();
 > duplicateTenTimes(10, out tenDuplicate); //at this point, the `tenDuplicate` has 10 copies of 10.
 > ```
+
 ##### 8.6 Box and unbox a value 📦一个值
 > `box` is a way of wrapping anything to a generic type, in this case we use `object`
 > ```C#
@@ -440,6 +470,7 @@
 >   //...  
 > }  
 > ```
+
 > 2. second choice, use `as` to perform the cast, and check if it is `null`
 > ```C#
 > WrappedInt wi = new WrappedInt();
@@ -452,17 +483,22 @@
 > }
 > ```
 
+
+
 #### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
 bear in mind, the biggest difference between `struct` and `class` is that: **Structs are value type whereas Classes are reference type.** `struct`：值类型、`class`：参考类型
+
 ##### 9.1 declare an enumeration 声明一个枚举
 > use the `enum` keyword => name of this `enum` => enumeration **literal** name
 > ```C#
 > enum Fruits{🍉，🥭，🍎，🍌，🍐，🥝}；  
 > ```  
+
 ##### 9.2 declare a enumeration variable 声明一个枚举变量
 > ```C#
 > Fruits tropicalFruit;  
 > ``` 
+
 ##### 9.3 declare a enumeration variable 赋一个枚举变量 一个值
 > ```C#
 > tropicalFruit = 🥭;  // error! the compiler cant detect what `🥭` is semantically
@@ -494,19 +530,25 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > ```C#
 > Point3d = new Point3d(0, 1, 2);  
 > ```  
+
+
+
 #### 10. Using arrays 阵列
 > what is the biggest difference between `Array` and `List`? `Array` is fixed size once it is initialized.`List` is dynamic, you can either `add` or`remove`items from it. 
->   
+>
+
 ##### 10.1 declare an array variable 声明一个 `array` 变量
 > [data_type][name_of_array];
 > ```C# 
 > bool [] flags;
 > ``` 
+
 ##### 10.2 **create an instance** of an array **创建**数组的**实例**
 > when you create an instance, you have to explicitly define the amount of the array. 当你创建一个实例，需要明确地定义数组的数量
 > ```C#  
 > bool [] flags = new bool[10];
-> ``` 
+> ```
+
 ##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值 
 > when you initialize the array, you have to assign specific values 初始化数组🔢，赋特定的值
 > ```C#   
@@ -524,7 +566,8 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > use the `[]` to access particular element 访问特定元素
 > ```C#   
 > int num = numPIAmount[2]; // we got 4
-> ```  
+> ```
+
 ##### 10.6 loop over an array 循环一个数组
 > use `for` loop or `foreach` loop
 > ```C#   
@@ -537,14 +580,16 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > {
 >     Console.WriteLine(flag);  
 > }
-> ```  
+> ```
+
 ##### 10.7 declare a **multidimensional array** variable 初始化元素数组声明值
 > declare a **multidimensional array** variable 声明一个**多维数组**变量
 > ```C#   
 > use this `[,]`
 > int [,] table;  
 > table = new int[4, 6]; //initialize an 4*6 array
-> ```  
+> ```
+
 ##### 10.8 declare a **jagged array** variable
 > use this `[][]`
 > ```C#
@@ -555,6 +600,7 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > items[2] = new int[40];
 > items[3] = new int[25];
 > ```
+
 the difference between _multidimensional array_ and _jagged array_ is that the 
 _multidimensional array_ is like a **square** with anything aligned.
 _jagged array_ is like zig-zag no symmetric shape.
@@ -564,6 +610,7 @@ _jagged array_ is like zig-zag no symmetric shape.
 >     int[,] multi
 > }
 > ```
+
 the difference between **multidimensional array** and **jagged array** is that 
 **multidimensional array** is like a `square` with all element aligned.
 **jagged array** is like zig-zag `non-symmetric shape`.
@@ -582,7 +629,9 @@ the difference between **multidimensional array** and **jagged array** is that
 >                           };
 > }   
 > ```  
-  
+
+
+
 #### 11. Understanding parameter arrays 参数阵列
 > By using the `params` keyword, we can specify a method parameter that takes a variable number of argument. 使用 关键词`params` 声明一个方法参数
 > however, the parameter type must be a single-dimensional array.
@@ -643,6 +692,8 @@ the difference between **multidimensional array** and **jagged array** is that
 > */
 >
 
+
+
 #### 12. Working with inheritance 继承
 ##### 12.1 createa derived class from a base class 从基类创建派生类
 > use the colon `:`
@@ -663,6 +714,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //then you dont need to write the code here, leave it blank  
 > }  
 > ```
+
 ##### 12.2 declare a `virtual` method in the `base` class and `override` it in the `derived` class 在基类中声明一个虚拟方法 并且 在衍生类中重写
 > remember:
 > `virtual` in the `base` class
@@ -683,6 +735,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //...
 > }
 > ```
+
 ##### 12.3 define an extension method for a type 为一种类型定义一个`扩展方法` 
 > what is `extension method`❓ 
 > it is the `.` method you use everyday. like `.Select()`, `.ToString()`, `.OrderBy()`.
@@ -714,6 +767,8 @@ the difference between **multidimensional array** and **jagged array** is that
 > int nine = ten.Negate(); //we can use `.Negate()` method without writing this method inside a class!!
 > ```  
 
+
+
 #### 13. Creating interfaces and defining abstract classes 创建接口与定义抽象类
 ##### the concept of `interface` is a little bit similar to `.header` file in C++, which is **a must for such class to implement it**
 ##### 13.1 declare an interface 声明一个界面
@@ -725,6 +780,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         string GetDescription();  
 > }  
 > ```
+
 ##### 13.2 Implement an interface 实现一个界面
 > implement the class to fulfill interface **explicitly** 实现一个类以明确地实现接口
 > ```C#
@@ -740,6 +796,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }
 > ```
+
 > implement the class to fulfill interface **implicitly** 实现类以含蓄地实现接口
 > ```C#
 > class Test : IDemo
@@ -754,6 +811,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
+
 ##### 13.3 `abstract` class which **can only be a base class** 抽象类只能成为基类
 > use the abstract keyword. **you cannot create an instance from an abstract class**
 > then, what is the point to create an `abstract` class? ❓
@@ -773,11 +831,14 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }
 > ```
+
 ##### 13.4 a `sealed` class that `cannot be a base class `
 > sealed class Horse 
 > {
 >     //...  
 > }  
+
+
 
 #### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
 ##### 14.1 Write a destructor
@@ -791,12 +852,14 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
+
 ##### 14.2 call the destructor is invalid 不能call一个destructor
 > you cannot call a destructor, only the garbage collector can call a destructor. 只有垃圾回收♻️才能call 一个destructor
 ##### 14.3 ❌ force garbage collection(not recommended) 不建议 强制垃圾垃圾回收
 > ```C#
 > GC.Collect
 > ```
+
 ##### 14.4 release a resource at a known point in time 在已知⌚️释放资源
 > ⚠️ cons: this is at the risk of resource leaks if an exception interrupts the execution 如果异常中断执行则存在资源泄漏的风险
 > how to do it? => write a **disposal method** (a method that disposes of a resource) and **call it explicitly** from the program 写一个**处理方法**
@@ -820,6 +883,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
+
 ##### 14.5 support exception-safe disposal in a class 在类中支持异常-安全🔐处理
 > that said, to implement the `IDisposable` interface 
 > ```C#
@@ -832,6 +896,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }  
 > }  
 > ```
+
 ##### 14.6 implement exception-safe disposal for an object that implements the `IDisposable` interface 实现 异常-安全🔐 处理 对象实施 `IDisposable`接口
 > 🌟 this is the recommended option in garbage collection 垃圾收集的建议选项
 > how to do it? => create the object in a `using` statement 在 `using` 声明中创建一个对象
@@ -844,6 +909,9 @@ the difference between **multidimensional array** and **jagged array** is that
 > ```  
   
 ### EXTENSIBLE TYPES WITH C# C#的扩展类型
+
+
+
 #### 15. Implementing properties to access fields 实现属性以访问字段
 > big picture: the design of property in C# is to inherit the `get()` and `set()` method in C++, but in an efficient, elegant and safe way.
 ##### 15.1 declare a read/write `property` for a structure or class 为structure 或 class 声明一个 读/写 `属性` 
@@ -862,6 +930,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     //...  
 > }  
 > ```
+
 > property with only `get` keyword is **read-only**
 > property with only `set` keyword is **write-only**
   
@@ -896,6 +965,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >     }
 > }
 > ```  
+
 ##### 15.3 Create an automatic property 创建一个自动属性
 > in the class or structure that contains the property, define the property with empty get and set accessors 在类或结构中包含属性，通过空的 `get`和 `set`附件定义属性
 > this is very handy feature!
@@ -923,12 +993,15 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```  
 
+
+
 #### 16. Using indexers 使用索引器
 > 🌟 big scope: what is the purpose of using indexer?
 > it aims to **deconstruct the integer to binary value**(`1/0` and `true/false`)which is very flexible!
 > 📌 fact: what are **integer**, **binary**, **hex**, etc?
 > we use `decimal system`十进制 in our life, e.g. "i am `29` years old", however the `hex`, `binary` are another form of representing numbers
 > `hexadecimal`十六进制 is 16-base. `binary`二进制 is 2-base.
+
 ##### 16.1 specify an integer value using **binary** or **hexadecimal** notation 
 > `0b0` for **binary** values prefixes.
 > `0x0` for **hexadecimal** values prefixes.
@@ -937,6 +1010,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > unit moreBinData = 0b0_11110000_01011010_11001100_00001111;
 > unit moreHexData = 0x0_F0_5A_CC_0F;  
 > ```  
+
 ##### 16.2 display an integer value as its binary or hexadecimal representation 以 **二进制** 或 **十六进制** 显示整数类型值
 > use the `Convert.ToString()` method, and specify 2(for binary) or 16(for hexadecimal) as the number base.
 > ```C#
@@ -998,7 +1072,10 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 
+
+
 #### 17. Introducing generics 范型
+
 ##### 17.1 Instantiate an object by using a generic type 通过使用范型实例化一个对象
 > when you see `<>` , it means this is used in generic type `<>` 意味着在范型中使用
 > ```C#
@@ -1032,6 +1109,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         //...  
 > }  
 > ```
+
 ##### 17.4 define a generic method 定义一个 范型方法
 > put`<T>` before the `()`
 > ```C#  
@@ -1055,6 +1133,7 @@ the difference between **multidimensional array** and **jagged array** is that
 >         T GetData();  
 > }  
 > ```
+
 ##### 17.7 define a **contravariant** interface 定义一个 **逆变** 接口
 > specify the `in` qualifier for covariant type parameters. Reference the **contravariant** type parameters only as the types of method parameters and not as return types:
 > ```C#  
@@ -1075,6 +1154,9 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 they work as the same in functionality no matter use `T` or `TItem`. I personally prefer `T` for simplicity.
+
+
+
 #### 18. Using collections 使用集合
 > the frequently used collections in C# are：
 ##### 18.1 create a new collection 创建一个新集合
@@ -1082,6 +1164,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```C#
 > List<PlayingCard> cards = new List<PlayingCard>();
 > ```
+
 ##### 18.2 add an item to a collection 添加一个物件到集合中
 > `List<T>` use `Add`
 > `HashSet<T>` use `Add`
@@ -1096,6 +1179,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > Stack<int> numbers = new Stack<int>();
 > numbers.Push(99);
 > ```
+
 ##### 18.3 remove an item from a collection 从一个集合中移除一个物件
 > `Remove` is used in `List<T>`, HashSet<T>, Dictionary<T, T>
 > `Dequeue` is used in `Queue<T>`
@@ -1168,6 +1252,8 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > }  
 > ```  
 
+
+
 #### 19. Enumerating collections 枚举集合
 ##### 19.1 make class enumerable which support the `foreach` construct 使类可枚举并支持 `foreach` 构造
 > implement the `IEnumerable` interface and provide a `GetEnumerable` method that return an IEnumerator object
@@ -1182,6 +1268,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >   
 > }
 > ```
+
 ##### 19.2 implement an enumerator without using an iterator 实施一个枚举器 without使用 一个迭代器
 > define a enumerator class that implements the `IEnumerator` interface, and that provide the `Current` property and the `MoveNext` method (and optionally the `Reset` method).
 > ```C#
@@ -1212,9 +1299,12 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >         yield return ...  
 >     }
 > }  
-> ```  
+> ```
+
+
   
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
+#####
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
 #### 22. Operator overloading 运算符重载
 
