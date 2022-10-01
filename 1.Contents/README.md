@@ -1304,7 +1304,8 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 
   
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
-#####
+#### Delegate and Event 委托与事件
+##### delegate 
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
 #### 22. Operator overloading 运算符重载
 
