@@ -1306,8 +1306,15 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### Delegate and Event 委托与事件
 ##### delegate 
-> 🌟 delegate
-
+> 🌟 `delegate` is literally an agent which can be seen as **delegate** of function 函数的委托
+> 🌟 `delegate` is a pointer to method 方法的
+##### 20.1 declare a **delegate** type 
+> put the delegate ahead the decoration of the function.
+> ```C#
+> delegate void myDelegate();  
+> ```  
+##### 20.2 create an instance of a delegate with initialization
+>   
 
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
 #### 22. Operator overloading 运算符重载
