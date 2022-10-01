@@ -1010,7 +1010,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > List<string> myList3 = new List<string>();
 > ```
 > as you can see, the `Queue` can contain `int`, `double`, and `string` etc. that is the design of `Queue` and `List`
-> 🌟 `T` was used to notate **generic** type  
+> 🌟 `T` was used to notate **generic** type 标记 范型
 > ```C#
 > public class Queue<T> : IEnumerable<T>, ICollection, IEnumerable
 > {
@@ -1170,7 +1170,8 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 
 #### 19. Enumerating collections 枚举集合
 ##### 19.1 make class enumerable which support the `foreach` construct 使类可枚举并支持 `foreach` 构造
-> implement the `IEnumerable` interface and provide a `GetEnumerable` method that return an IEnumerator object 
+> implement the `IEnumerable` interface and provide a `GetEnumerable` method that return an IEnumerator object
+> ```C#
 > public class Tree<T> :  IEnumerable<T>
 > {
 >     //...
@@ -1180,9 +1181,29 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     }  
 >   
 > }
+> ```
 ##### 19.2 implement an enumerator without using an iterator 实施一个枚举器 without使用 一个迭代器
-> define a enumerator class that implements the `IEnumerable` interface, and that provide the `Current` property and the `MoveNext` method (and optionally the `Reset` method).
->   
+> define a enumerator class that implements the `IEnumerator` interface, and that provide the `Current` property and the `MoveNext` method (and optionally the `Reset` method).
+> ```C#
+> public class TreeEnumerator<T> : IEnumerator<T>
+> {
+>     //...
+>     T Current
+>     {
+>         get
+>         {
+>         //...
+>         }
+>     }
+>     bool MoveNext()
+>     {
+>          //...
+>     }
+> }
+> ```
+
+##### 19.3 define an enumerator by using an iterator 使用迭代器定义一个 遍历器
+> implement the enumerator to indicate which items should be returned (using the yield )
   
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
