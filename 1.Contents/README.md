@@ -1124,7 +1124,24 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```
 
 ##### 18.5 locate an item in a collection 在集合中定位一个物件
-> array notation
+> _array notation_ is used in _dictionary-oriented collections_
+> `Find` is used in _lists_
+> ```C#
+> Dictionary<string, int> ages = new Dictionary<string, int>();
+> ages.<"Wang", 29>;
+> int wangsAge = ages["Wang"]
+> ```
+> in case there is a class named `Person` 
+> ```C#
+> public class Person  
+> {
+>     public int ID { get; set; }
+>     public string Name { get; set; }
+>     public double Height { get; set; }  
+> }
+> ```  
+
+
 
 
 
