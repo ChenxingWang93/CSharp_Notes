@@ -1203,7 +1203,16 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```
 
 ##### 19.3 define an enumerator by using an iterator 使用迭代器定义一个 遍历器
-> implement the enumerator to indicate which items should be returned (using the yield )
+> implement the enumerator to indicate which items should be returned (using the `yield` statement) and in which order
+> ```C#
+> IEnumerator<TItem> GetEnumerator()
+> {
+>     for (...)
+>     {
+>         yield return ...  
+>     }
+> }  
+> ```  
   
 #### 20. Decoupling application logic and handling events 解耦应用逻辑和事件处理
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
