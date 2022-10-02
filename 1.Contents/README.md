@@ -1313,8 +1313,10 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```C#
 > delegate void myDelegate();  
 > ```  
-##### 20.2 create an instance of a delegate with initialization
->   
+##### 20.2 create an instance of a delegate with initialization 通过初始化 创建一个委托的实例
+> 🔭 bigger picture why do we need delegate? 为什么需要委托
+
+
 
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
 #### 22. Operator overloading 运算符重载
