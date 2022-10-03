@@ -1399,12 +1399,15 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```C#
 > //SQL way of doing 
 > var companyNames = from a in addresses
+>                    orderby a.CompanyName
+>                    select a.CompanyName;
 >   
 > ```  
 ##### Lambda 表达式是一种可以替代委托实例的匿名方法。编译器会立即将Lambda表达式转换为以下两种形式之一：
 - 一个委托实例
 - 一个类型为Expression<TDelegate> 的表达式🌲。该表达式🌲将Lambda表达式内部的代码表现为一个可遍历的对象模型
 
+##### 21.4 group data by the values in a field
 
   
 #### 22. Operator overloading 运算符重载
