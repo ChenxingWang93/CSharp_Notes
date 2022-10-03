@@ -1407,7 +1407,38 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 - 一个委托实例
 - 一个类型为Expression<TDelegate> 的表达式🌲。该表达式🌲将Lambda表达式内部的代码表现为一个可遍历的对象模型
 
-##### 21.4 group data by the values in a field
+##### 21.4 **group** data by the values in a field
+> use the `GroupBy` method with lambda expression
+> ```C#
+> using System.Linq;
+> //linq way of doing
+> var companiesGroupedByCountry = addresses.GroupBy(addres => addrs.Country);
+> ```
+  
+> use `group by`
+> ```C#
+> //SQL way of doing
+> var companiesGroupedByCountry = from a in addresses
+>                                                                 group a by a.Country;  
+> ```  
+  
+##### 21.5 **join** data held in two different collections 
+> use the `Join` method, specifying the collection with which to join, the join criteria, and the fields for the result
+> ```C#
+> using System.Linq;
+> //linq way of doing   
+> var countriesAndCustomers = customers.Select(c => new { c.FirstName, c.LastName, c.CompanyName})
+>                                                                           .Join(addresses, custs => custs.CompanyName,
+>                                                                           addrs => addrs.CompanyName,  
+>                                                                           (custs, addrs) => new {custs.FirstName, custs.LastName, addrs.Country});
+> ```
+
+  
+##### 21.6 force immediate generation of the results for a LINQ query
+> use `ToList()` and `ToArray()` to generate a list or an array 
+> ```C#
+>   
+> ```
 
   
 #### 22. Operator overloading 运算符重载
