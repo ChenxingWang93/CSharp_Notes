@@ -1442,6 +1442,8 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```
   
 #### 22. Operator overloading 运算符重载
+##### 🔭🔭 big picture: operator overloading is to mimic arithmetic operation between instances, see following example to demonstrate all.
+>   
 
 ### BUILDING UNIVERSAL WINDOWS PLATFORM APPLICATIONS WITH C#
 #### 23. Improving throughput by using tasks 通过使用任务提高吞吐量
