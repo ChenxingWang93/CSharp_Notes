@@ -1366,9 +1366,44 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > var customerFirstNames = from cust in customers
 >                                                 select cust.FirstName;  
 > ```
+  
+##### 21.2 **filter** rows from an enumerable collection 从可遍历集合中过滤行
+> use the `where` method with lambda expression.
+> ```C#
+> using System.Linq;
+> //Linq way of doing 
+> var usCompanies = addresses.Where(addr => 
+>                                                     String.Equals(addr.Country,"United States"))
+>                                                     .Select(usComp => usComp.CompanyName);  
+> ```
 
-##### Lambda 表达式
-Lambda 表达式是
+> Use `where`
+> ```C#
+> //SQL way of doing 
+> var usCompanies = from a in addresses
+>                   where String.Equals(a.Country, "United States")
+>                   select a.CompanyName;  
+> ```
+  
+##### 21.3 enumerate data in a specified order 在特定的顺序下列举数据
+> Use the `OrderBy` method with lambda expression. lambda表达式的`OrderBy`方法
+> ```C#
+> using System.Linq;
+> //linq way of doing 
+> //sort the list in light of CompanyName then select the names  
+> var companyNames = addresses.OrderBy(addr => addr.CompanyName)
+>                                                           .Select(comp => comp.CompanyName);  
+> ```
+
+> Use `orderby`
+> ```C#
+> //SQL way of doing 
+> var companyNames = from a in addresses
+>   
+> ```  
+##### Lambda 表达式是一种可以替代委托实例的匿名方法。编译器会立即将Lambda表达式转换为以下两种形式之一：
+- 一个委托实例
+- 一个类型为Expression<TDelegate> 的表达式🌲。该表达式🌲将Lambda表达式内部的代码表现为一个可遍历的对象模型
 
 
   
