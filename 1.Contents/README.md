@@ -1317,12 +1317,61 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > 🔭 bigger picture: why do we need delegate? 为什么需要委托？
 > bc sometime we dont know which method we should use, imagine **delegate is a variable of method** rather than value 应该使用什么方法.
 > ```C#
-> two methods defined
+> //two methods defined
+> public double Add(double lhs, double rhs) => lhs + rhs;
+> public double Substract (double lhs, double rhs) => lhs - rhs;
+> 
+> //declare an delegate whose parameter must match those you want to use
+> public double ArithmeticOperation (double lhs, double rhs);
 >   
+> //initialization
+> ArithmeticOperation operation;
+> bool flag = false;
+> 
+> //now the method operation is decided by the boolean value
+> public void AutoSelectOperation()
+> {
+>     if(flag)
+>     {
+>        operation = Add;  
+>     }
+>     else
+>     {
+>        operation = Substract;  
+>     }  
+> }  
+>  
+> // use the delegate method
+> double result = operation(10, 3)//since flag = false, the operation points to substract, so the result = 7  
 > ```
+  
+##### 20.3 declare an event 
+//to do 
+  
 
 
 #### 21. Querying in-memory data by using query expressions 使用查询表达式查询内存中的数据
+##### the following examples use a class called `Address` with 3 properties: `CompanyName`, `City`, `Country`
+##### 21.1 **select** specified fields from an enumerable collection
+> use `Select` method with lambda expression 
+> ```C#
+> using System.Linq;
+> //Linq way of doing
+> var customerFirstNames = customers.Select(cust => cust.FirstName)
+> ```  
+  
+> use `select` and `from`
+> //SQL way of doing
+> ```C#
+> var customerFirstNames = from cust in customers
+>                                                 select cust.FirstName;  
+> ```
+
+##### Lambda 表达式
+Lambda 表达式是
+
+
+  
 #### 22. Operator overloading 运算符重载
 
 ### BUILDING UNIVERSAL WINDOWS PLATFORM APPLICATIONS WITH C#
