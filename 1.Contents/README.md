@@ -1437,9 +1437,9 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 ##### 21.6 force immediate generation of the results for a LINQ query
 > use `ToList()` and `ToArray()` to generate a list or an array 
 > ```C#
->   
+> var allEmployees = from e in empTree.ToList<Employee>()
+>                                    select e;  
 > ```
-
   
 #### 22. Operator overloading 运算符重载
 
