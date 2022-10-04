@@ -1449,6 +1449,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     public int Real { get; set; } //the real part of complex num
 >     public int Imaginary { get; set; } //the imaginary part of complex num
 >     
+>       
 >     //add the constructor, this constructor takes two *int* parameters and uses them to populate the *Real* and *Imaginary* properties
 >     public Complex (int real, int imaginary)
 >     {
@@ -1456,6 +1457,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >         this.Imaginary = imaginary;
 >     }
 >     
+>       
 >     //Override the ToString method 覆盖ToString 方法
 >     //...
 >     public override string ToString()
@@ -1463,8 +1465,61 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >         return $({this.Real} + {this.Imaginary}i);
 >     }
 >     
+>       
+>     //add the overloaded + operator to the complex class
+>     //...
+>     public static Complex operator + (Complex lhs, Complex rhs)
+>     {
+>         return new Complex (lhs.Real + rhs.Real, lhs.Imaginary + rhs.Imaginary); 
+>     }
 >     
 >     
+>     //add the overloaded - operator to the complex class
+>     //...
+>     public static Complex operator - (Complex lhs, Complex rhs)
+>     {
+>         return new Complex (lhs.Real - rhs.Real, lhs.Imaginary - rhs.Imaginary);  
+>     }
+>  
+>     
+>     //implement * operator and /operator   
+>     //...
+>     public static Complex operator *(Complex lhs, Complex rhs)
+>     {
+>         return new Complex (lhs.Real * rhs.Real - lhs.Imaginary * rhs.Imaginary,
+>                             lhs.Imaginary * rhs.Real + lhs.Real * rhs.Imaginary);  
+>     }  
+>     
+>     public static Complex operator /(Complex lhs, Complex rhs)
+>     {
+>         int realElement = (lhs.Real * rhs.Real + lhs.Imaginary * rhs.Imaginary) / 
+>                           (rhs.Real * rhs.Real + rhs.Imaginary * rhs.Imaginary);
+>         int imaginaryElement = (lhs.Imaginary + rhs.Real - lhs.Real * rhs.Imaginary) /
+>                                (rhs.Real * rhs.Real + rhs.Imaginary * rhs.Imaginary);
+>         return new Complex(realElement, imaginaryElement);  
+>     }
+>     
+>     //
+>     static void doWork()
+>     {
+>         Complex first = new Comlex(10, 4);
+>         Complex second = new Complex(5, 2);
+>           
+>         Console.WriteLine ($"first is {first}");
+>         Console.WrireLine ($"second is {second}");
+>         
+>         Complex temp = first + second;
+>         Console.WriteLine ($"Add: result is {temp}");
+>  
+>         temp = first - second;
+>         Console.WriteLine($"Substract: result is {temp}");
+>           
+>         temp = first * second;
+>         Console.WriteLine($"Multiply: result is {temp}");
+>           
+>         temp = first / second;
+>         Console.WriteLine($"Divide: result is {temp}");        
+>     }  
 > }
 > ```
 
