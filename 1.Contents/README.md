@@ -1449,12 +1449,21 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     public int Real { get; set; } //the real part of complex num
 >     public int Imaginary { get; set; } //the imaginary part of complex num
 >     
->     //add the constructor, this constructor takes two int parameters and uses them to populate the Real and Imaginary properties
+>     //add the constructor, this constructor takes two *int* parameters and uses them to populate the *Real* and *Imaginary* properties
 >     public Complex (int real, int imaginary)
 >     {
 >         this.Real = real;
 >         this.Imaginary = imaginary;
 >     }
+>     
+>     //Override the ToString method 覆盖ToString 方法
+>     //...
+>     public override string ToString()
+>     {
+>         return $({this.Real} + {this.Imaginary}i);
+>     }
+>     
+>     
 >     
 > }
 > ```
