@@ -1572,7 +1572,7 @@ having everything set up, we can take advantage of the `overloaded` operator
 > {
 >     Console.WriteLine("Comparison: temp!= first");  
 > }
->   
+> //since from complex instance to 
 > ```
 
 ### BUILDING UNIVERSAL WINDOWS PLATFORM APPLICATIONS WITH C#
