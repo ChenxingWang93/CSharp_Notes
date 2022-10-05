@@ -1407,7 +1407,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 - 一个委托实例
 - 一个类型为Expression<TDelegate> 的表达式🌲。该表达式🌲将Lambda表达式内部的代码表现为一个可遍历的对象模型
 
-##### 21.4 **group** data by the values in a field
+##### 21.4 **group** data by the values in a field 
 > use the `GroupBy` method with lambda expression
 > ```C#
 > using System.Linq;
@@ -1422,7 +1422,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >                                                                 group a by a.Country;  
 > ```  
   
-##### 21.5 **join** data held in two different collections 
+##### 21.5 **join** data held in two different collections **join** 两个不同集合中的数据
 > use the `Join` method, specifying the collection with which to join, the join criteria, and the fields for the result
 > ```C#
 > using System.Linq;
@@ -1434,7 +1434,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```
 
   
-##### 21.6 force immediate generation of the results for a LINQ query
+##### 21.6 force immediate generation of the results for a LINQ query 强迫LINQ query立即生成结果
 > use `ToList()` and `ToArray()` to generate a list or an array 
 > ```C#
 > var allEmployees = from e in empTree.ToList<Employee>()
@@ -1442,7 +1442,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 > ```
   
 #### 22. Operator overloading 运算符重载
-##### 🔭🔭 big picture: operator overloading is to mimic arithmetic operation between instances, see following example to demonstrate all.
+##### 🔭🔭 big picture: operator overloading is to mimic arithmetic operation between instances, see following example to demonstrate all. 模拟实例之间的算术运算
 > ```C#
 > class Complex 
 > {
@@ -1450,7 +1450,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     public int Imaginary { get; set; } //the imaginary part of complex num
 >     
 >       
->     //add the constructor, this constructor takes two *int* parameters and uses them to populate the *Real* and *Imaginary* properties
+>     //add the constructor, this constructor takes two *int* parameters and uses them to populate the *Real* and *Imaginary* properties 添加构造器，该构造器将两个 **int** 参数 
 >     public Complex (int real, int imaginary)
 >     {
 >         this.Real = real;
@@ -1466,7 +1466,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     }
 >     
 >       
->     //add the overloaded + operator to the complex class
+>     //add the overloaded + operator to the complex class 添加重载 + 运算符到 复杂 类
 >     //...
 >     public static Complex operator + (Complex lhs, Complex rhs)
 >     {
@@ -1474,7 +1474,7 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     }
 >     
 >     
->     //add the overloaded - operator to the complex class
+>     //add the overloaded - operator to the complex class 添加重载 - 运算符到 复杂 类
 >     //...
 >     public static Complex operator - (Complex lhs, Complex rhs)
 >     {
@@ -1482,24 +1482,30 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     }
 >
 >     
->     //add the == and != operators to the Complex class
+>     //add the == and != operators to the Complex class 添加 == 与 != 运算符到 复杂 类
 >     public static bool operator == (Complex lhs, Complex rhs)
 >     {
 >         return lhs.Equals(rhs);
 >     }
+>     // can be written as ⬇️  
+>     public static bool operator == (Complex lhs, Complex rhs) => lhs.Equals(rhs);
+>       
 >     public static bool operator != (Complex lhs, Complex rhs)
 >     {
 >         return !(lhs.Equals(rhs));
 >     }
+>     // can be written as ⬇️
+>     public static bool operator != (Complex lhs, Complex rhs) => !(lhs.Equals(rhs));
+>       
 >  
 >     
->     //implement * operator and /operator   
+>     //implement * operator and /operator 实施* 运算符 与 /运算符
 >     //...
 >     public static Complex operator *(Complex lhs, Complex rhs)
 >     {
 >         return new Complex (lhs.Real * rhs.Real - lhs.Imaginary * rhs.Imaginary,
 >                             lhs.Imaginary * rhs.Real + lhs.Real * rhs.Imaginary);  
->     }  
+>     }
 >     
 >     public static Complex operator /(Complex lhs, Complex rhs)
 >     {
@@ -1532,12 +1538,48 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >         Console.WriteLine($"Divide: result is {temp}");    
 >     }
 >     
->     //
+>     //override the `Equals` method
+>     public override bool Equals(object obj)
+>     {
+>         if (obj is Complex)
+>         {
+>             Complex compare = (Complex)obj;
+>             return (this.Real == compare.Real) && (this.Imaginary == compare.Imaginary);  
+>         }
+>         else
+>         {
+>             return false;  
+>         }
+>     }
+>     // `int` TO => `Complex instance` can be implicit 隐式转换
+>     public static implicit operator Complex(int from) => new Complex(from);
+>     // `Complex instance` TO => `int` has to be explicit 显式转换
+>     public static explicit operator int (Complex complex) => complex.Real;
 > }
+> 
+having everything set up, we can take advantage of the `overloaded` operator
+> ```C#
+> Complex first = new Complex(10, 4);
+> Complex second = new Complex(5, 2);
+> Complex temp = first + second //since the `+` is overloaded for Complex class, this operation is valid 
+> //since the `==` is overloaded for Complex class
+> //the two instance can be compared under the way defined above
+> if (temp==first)
+> {
+>     Console.WriteLine("Comparison: temp == first");  
+> }  
+> else
+> {
+>     Console.WriteLine("Comparison: temp!= first");  
+> }
+>   
 > ```
 
 ### BUILDING UNIVERSAL WINDOWS PLATFORM APPLICATIONS WITH C#
 #### 23. Improving throughput by using tasks 通过使用任务提高吞吐量
+  
+  
+  
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
 #### 26. Displaying and searching for data in a universal Windows Platform app 在通用windows 平台应用中显示和查询数据
