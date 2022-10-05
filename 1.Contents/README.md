@@ -1518,8 +1518,10 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >         Console.WriteLine($"Multiply: result is {temp}");
 >           
 >         temp = first / second;
->         Console.WriteLine($"Divide: result is {temp}");        
->     }  
+>         Console.WriteLine($"Divide: result is {temp}");    
+>     }
+>     
+>     //
 > }
 > ```
 
