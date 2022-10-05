@@ -1627,7 +1627,32 @@ having everything set up, we can take advantage of the `overloaded` operator
 > ```  
 
   
-> #####   
+> ##### 23.4. Continue a task after last task finished 在最后的任务结束 后继续一个任务
+> Use `ContinueWith`
+> ```C#
+> Task task = new Task(doWork);
+> task.ContinueWith(doMoreWork, TaskContinuationOptions.NotOnFaulted);
+> ```
+  
+##### 23.5 **Parallel** Computing 平行计算
+> Use `Parallel.For` or `Parallel.ForEach` to iterate parallely
+> ```C#
+> private void performLoopProcessing(int x)
+> {
+>         // perform loop processing  
+> }
+> //...
+> Parallel.For(0, 100, performLoopProcessing);
+> ```
+
+> use `Parallel.Invoke` to perform concurrent method with multiple tasks `Parallel.Invoke` 执行同时发生的方法 多任务👥
+> ```C#
+> Parallel.Invoke(doWork, doMoreWork, doYetMoreWork);  
+> ```
+
+##### 23.6 **handle exceptions** raised by one or more tasks 处理例外 
+> ```C#
+> ```  
   
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
