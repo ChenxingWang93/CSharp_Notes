@@ -1480,6 +1480,17 @@ they work as the same in functionality no matter use `T` or `TItem`. I personall
 >     {
 >         return new Complex (lhs.Real - rhs.Real, lhs.Imaginary - rhs.Imaginary);  
 >     }
+>
+>     
+>     //add the == and != operators to the Complex class
+>     public static bool operator == (Complex lhs, Complex rhs)
+>     {
+>         return lhs.Equals(rhs);
+>     }
+>     public static bool operator != (Complex lhs, Complex rhs)
+>     {
+>         return !(lhs.Equals(rhs));
+>     }
 >  
 >     
 >     //implement * operator and /operator   
