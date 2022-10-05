@@ -1652,6 +1652,41 @@ having everything set up, we can take advantage of the `overloaded` operator
 
 ##### 23.6 **handle exceptions** raised by one or more tasks 处理例外 
 > ```C#
+> //1. catch the aggregate exception
+> try 
+> {
+>     Task task = Task.Run(...)  
+> }
+> catch (AggregateException ae)
+> {
+>     ae.Handle(handleException); 
+> }  
+> //2. Check which bunch of exceptions are in aggregate exceptions
+> private bool handleException(Exception e)
+> {
+>     if(e is TaskCanceledException)
+>     {
+>         //...
+>         return true;  
+>     }
+>     else
+>     {
+>         return false;  
+>     }  
+> }  
+> ```
+  
+##### 23.7. Enable cancellation in a task
+> a. create a `CancellationTokenSource` object 
+> b. put `CancellationToken` in method
+> c. call `ThrowIfCancellationRequested` to throw `OperationCanceledException`
+> d. terminate this task
+> ```C#
+> private void generateGraphData(..., CancellationToken token)
+> {
+>     //...
+>     token.ThrowIfCancellationRequested();
+> }  
 > ```  
   
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
