@@ -1713,6 +1713,7 @@ having everything set up, we can take advantage of the `overloaded` operator
 > }
 > ```
 
+##### make the _slowMethod_ method more responsive by using a _Task_ object to run the _doFirstLongRunningOperation_ method and define continuations for the same _Task_ that run the _doSecondLongRunningOperation_ and _doThirdLongRunningOperation_ methods in turn 
 > ```C#
 > private void slowMethod()
 > {
@@ -1726,7 +1727,14 @@ having everything set up, we can take advantage of the `overloaded` operator
 > {
 >     //...  
 > }
->   
+> private void doSecondLongRunningOperation(Task t)
+> {
+>     //...  
+> }  
+> private void doThirdLongRunningOperation(Task t)
+> {
+>     //...  
+> }  
 > ```
 
 
