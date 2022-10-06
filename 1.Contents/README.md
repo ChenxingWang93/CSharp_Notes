@@ -1737,6 +1737,23 @@ having everything set up, we can take advantage of the `overloaded` operator
 > }  
 > ```
 
+##### 1⃣️
+> private void slowMethod()
+> {
+>     Task task = new Task(doFirstLongRunningOperation);
+>     task.ContinueWith(doSecondLongRunningOperation);
+> }
+> private void slowMethod()
+> {
+>     Task task = new Task(doFirstLongRunningOperation);
+>     task.ContinueWith(doSecondLongRunningOperation);
+>     task.ContinueWith(doThirdLongRunningOperation);
+>     task.ContinueWith((t) => this.Dispatcher.RunAsync(CoreDispatcherPriority).Normal,
+>     () => message.text = "Processing Complete");
+>     task.Start();
+>
+> }
+
 
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
 #### 26. Displaying and searching for data in a universal Windows Platform app 在通用windows 平台应用中显示和查询数据
