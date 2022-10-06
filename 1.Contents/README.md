@@ -1687,9 +1687,45 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     //...
 >     token.ThrowIfCancellationRequested();
 > }  
-> ```  
+> ```
   
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
+##### Problem ❓ and Solution 🔨
+> ```C#
+> private void slowMethod()
+> {
+>     doFirstLongRunningOperation();
+>     doSecondLongRunningOperation();
+>     doThirdLongRunningOperation();
+>     message.Text = "Processing Completed"
+> }
+> private void doFirstLongRunningOperation()
+> {
+>     //...
+> }
+> private void doSecondLongRunningOperation()
+> {
+>     //...
+> }
+> private void doThirdLongRunningOperation()
+> {
+>     //...
+> }
+> ```
+
+> ```C#
+> private void slowMethod()
+> {
+>     Task task = new Task(doFirstLongRunningOperation);
+>     task.ContinueWith(doSecondLongRunningOperation);
+>     task.ContinueWith(doThirdLongRunningOperation);
+>     task.Start();
+>     message.Text = "Processing Completed"; //When does this message appear?
+> }
+> 
+> ```
+
+
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
 #### 26. Displaying and searching for data in a universal Windows Platform app 在通用windows 平台应用中显示和查询数据
 #### 27. Accessing a remote database from a universal Windows Platform app 从通用Windows 平台应用访问远程数据库
