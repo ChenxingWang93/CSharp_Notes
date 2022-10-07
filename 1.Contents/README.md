@@ -1747,7 +1747,7 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 ❌the following problem is that the `message.Text` does not wait for `Task t` end, the message pop up right after `task.Start()` or we can say while the `"Processing Completed"` is being performed.
 
 
-#### 2⃣️ implement `task` with `wait`
+#### 2⃣️ implement `Task` with `wait`
 > ```C#
 > private void slowMethod()
 > {
@@ -1762,7 +1762,22 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 ❌the call to `Wait()` method blocks the thread executing the `slowMethod()` method and make using `Task` in the first place meaningless
 ⚠️⚠️⚠️ gp you should _never_ call the _Wait_ method directly in the UI thread. 
 
-##### 3⃣️
+  
+##### 3⃣️ implement `Task` with defined continuation 
+> private void slowMethod()
+> {
+>     Task task = new Task(doFirstLongRunningOperation);
+>     task.ContinueWith(doSecondLongRunningOperation);
+>     task.ContinueWith(doThirdLongRunningOperation);
+>     task.ContinueWith((t) => message.Text = "Processing Complete");
+>     task.Start();  
+> }  
+  
+❌run code in 
+  
+  
+  
+  
 > ```C#
 > private void slowMethod()
 > {
