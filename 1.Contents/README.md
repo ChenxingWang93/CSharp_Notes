@@ -1798,12 +1798,12 @@ The solution 🔨🔨🔨
 the keyword `async` and `await` in C# is to enable you to define and call methods that can run asynchronously. you dont have to concern with specifying continuations or scheduling code to run on _Dispatcher_ objects to ensure that data is manipulated on the correct thread.
 
 async: 
-does ✔️: 
-does not ❌:
+does ✔️: specify that the code in the method can be divided into one or more continuations, when these continuations run, they execute on the same thread as the original method call.
+does not ❌: the _async_ modifier does not signify that a method runs asynchronously on a seperate thread.
 
 await: 
 does ✔️: 
-does not ❌:
+does not ❌: 
   
 ##### the _slowMethod_ method implemented as an asynchronous method with the _async_ modifier and _await_ operators
 > ```C#
