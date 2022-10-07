@@ -1761,7 +1761,8 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 > ```  
 ❌the call to `Wait()` method blocks the thread executing the `slowMethod()` method and make using `Task` in the first place meaningless
 ⚠️⚠️⚠️ gp you should _never_ call the _Wait_ method directly in the UI thread. 
-  
+
+##### 3⃣️
 > ```C#
 > private void slowMethod()
 > {
