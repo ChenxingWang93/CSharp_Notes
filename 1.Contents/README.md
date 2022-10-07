@@ -1795,7 +1795,8 @@ the `_Dispatcher_` object is a component of the UI infrastructure, and you can s
 
 
 The solution 🔨🔨🔨
-the keyword async
+the keyword `async` and `await` in C# is to enable you to define and call methods that can run asynchronously.
+
 async:
 await: 
   
@@ -1808,7 +1809,7 @@ await:
 >     await doThirdLongRunningOperation();
 >     message.Text = "Processing Complete";
 > }
-> ```
+> ``` 
 
 
 
