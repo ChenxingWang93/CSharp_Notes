@@ -1692,8 +1692,11 @@ having everything set up, we can take advantage of the `overloaded` operator
 
 
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
-##### Problem ❓ and Solution 🔨
-##### the problem ❓: suppose that you define a method call slowMethod()
+#### Problem ❓ and Solution 🔨
+#### the problem ❓: 
+##### suppose that you define a method called `slowMethod()` which is invoked by a UI event, e.g. displays a message in a _TextBox_ control on the screen. 
+if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ event handler for a button control, the **UI** will become unresponsive until the method runs through one by one.
+  
 > ```C#
 > private void slowMethod()
 > {
@@ -1716,7 +1719,7 @@ having everything set up, we can take advantage of the `overloaded` operator
 > }
 > ```
 
-
+#### the solution1⃣️: implement with `Task t` 👎
 ##### make the _slowMethod_ method more responsive by using a _Task_ object to run the _doFirstLongRunningOperation_ method and define continuations for the same _Task_ that run the _doSecondLongRunningOperation_ and _doThirdLongRunningOperation_ methods in turn 
 > ```C#
 > private void slowMethod()
@@ -1740,6 +1743,8 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     //...  
 > }  
 > ```
+
+❌the following problem is that the `message.Text` does not wait for `Task t` end, the message pop up right after `task.Start()` or we can say while the `"Processing Completed"` is being performed.
 
 
 ##### 1⃣️
