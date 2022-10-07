@@ -1795,10 +1795,15 @@ the `_Dispatcher_` object is a component of the UI infrastructure, and you can s
 
 
 The solution 🔨🔨🔨
-the keyword `async` and `await` in C# is to enable you to define and call methods that can run asynchronously.
+the keyword `async` and `await` in C# is to enable you to define and call methods that can run asynchronously. you dont have to concern with specifying continuations or scheduling code to run on _Dispatcher_ objects to ensure that data is manipulated on the correct thread.
 
-async:
+async: 
+does ✔️: 
+does not ❌:
+
 await: 
+does ✔️: 
+does not ❌:
   
 ##### the _slowMethod_ method implemented as an asynchronous method with the _async_ modifier and _await_ operators
 > ```C#
