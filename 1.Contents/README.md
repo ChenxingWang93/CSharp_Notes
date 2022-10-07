@@ -16,7 +16,17 @@
 > Text is a set to be deleted
 
 ##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
-> 
+##### primitive data types
+| Data type | Description | Size(bits) | Range | Sample Usage |
+|-----------|-------------|------------|-------|--------------|
+| _int_     | Description | 32         | Range | Sample Usage |
+| _long_    | Description | 64         | Range | Sample Usage |
+| _float_   | Description | 32         | Range | Sample Usage |
+| _double_  | Description | 64         | Range | Sample Usage |
+| _decimal_ | Description | 128        | Range | Sample Usage |
+| _string_  | Description | 16 bits per character | Range | Sample Usage |
+| _char_    | Description | 16         | Range | Sample Usage |
+| _bool_    | Description | 8          | Range | Sample Usage |
 
 ##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
@@ -1797,9 +1807,12 @@ the `_Dispatcher_` object is a component of the UI infrastructure, and you can s
 The solution 🔨🔨🔨
 the keyword `async` and `await` in C# is to enable you to define and call methods that can run asynchronously. you dont have to concern with specifying continuations or scheduling code to run on _Dispatcher_ objects to ensure that data is manipulated on the correct thread.
 
-async: 
-does ✔️: specify that the code in the method can be divided into one or more continuations, when these continuations run, they execute on the same thread as the original method call.
-does not ❌: the _async_ modifier does not signify that a method runs asynchronously on a seperate thread.
+async:
+
+does ✔️: 
+specify that the code in the method can be divided into one or more continuations, when these continuations run, they execute on the same thread as the original method call.
+does not ❌: 
+the _async_ modifier does not signify that a method runs asynchronously on a seperate thread.
 
 await: 
 does ✔️: 
