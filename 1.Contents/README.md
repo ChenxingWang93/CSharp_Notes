@@ -1764,6 +1764,7 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 
   
 ##### 3⃣️ implement `Task` with defined continuation 
+> ```C#
 > private void slowMethod()
 > {
 >     Task task = new Task(doFirstLongRunningOperation);
@@ -1772,6 +1773,7 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 >     task.ContinueWith((t) => message.Text = "Processing Complete");
 >     task.Start();  
 > }  
+> ```
   
 ❌run code in Debug mode, you will find that the final continuation generates a _System.Exception_ "the application call an interface that was marshaled for a different thread."
   
@@ -1792,7 +1794,10 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 the `_Dispatcher_` object is a component of the UI infrastructure, and you can send it requests to perform work on the UI thread by calling its `_RunAsyn_` method
 
 
-The 
+The solution 🔨🔨🔨
+the keyword async
+async:
+await: 
   
 ##### the _slowMethod_ method implemented as an asynchronous method with the _async_ modifier and _await_ operators
 > ```C#
