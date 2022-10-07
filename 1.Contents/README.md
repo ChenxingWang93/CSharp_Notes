@@ -1675,7 +1675,8 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     }  
 > }  
 > ```
-  
+
+
 ##### 23.7. Enable cancellation in a task
 > a. create a `CancellationTokenSource` object 
 > b. put `CancellationToken` in method
@@ -1688,9 +1689,11 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     token.ThrowIfCancellationRequested();
 > }  
 > ```
-  
+
+
 #### 24. Improving response time by performing asynchronous operations 通过执行异步操作缩短响应时间
 ##### Problem ❓ and Solution 🔨
+##### the problem ❓: suppose that you define a method call slowMethod()
 > ```C#
 > private void slowMethod()
 > {
@@ -1712,6 +1715,7 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     //...
 > }
 > ```
+
 
 ##### make the _slowMethod_ method more responsive by using a _Task_ object to run the _doFirstLongRunningOperation_ method and define continuations for the same _Task_ that run the _doSecondLongRunningOperation_ and _doThirdLongRunningOperation_ methods in turn 
 > ```C#
@@ -1737,7 +1741,9 @@ having everything set up, we can take advantage of the `overloaded` operator
 > }  
 > ```
 
+
 ##### 1⃣️
+> ```C#
 > private void slowMethod()
 > {
 >     Task task = new Task(doFirstLongRunningOperation);
@@ -1753,6 +1759,19 @@ having everything set up, we can take advantage of the `overloaded` operator
 >     task.Start();
 >
 > }
+> ```
+
+
+##### the _slowMethod_ method implemented as an asynchronous method with the _async_ modifier and _await_ operators
+> ```C#
+> private async void slowMethod()
+> {
+>     await doFirstLongRunningOperation();
+>     await doSecondLongRunningOperation();
+>     await doThirdLongRunningOperation();
+>     message.Text = "Processing Complete";
+> }
+> ```
 
 
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
