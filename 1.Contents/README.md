@@ -1773,11 +1773,10 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 >     task.Start();  
 > }  
   
-❌run code in 
+❌run code in Debug mode, you will find that the final continuation generates a _System.Exception_ "the application call an interface that was marshaled for a different thread."
   
   
-  
-  
+##### 4⃣️display the message required by the _slowMethod_ from a continuation, and use `Dispatcher`.😯👌
 > ```C#
 > private void slowMethod()
 > {
@@ -1787,11 +1786,14 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 >     task.ContinueWith((t) => this.Dispatcher.RunAsync(CoreDispatcherPriority).Normal,
 >     () => message.text = "Processing Complete");
 >     task.Start();
->
 > }
 > ```
+❌messy and difficult to maintain, have a delegate (the continuation) specifying another delegate(the code to be run by _RunAsync_) 
+the `_Dispatcher_` object is a component of the UI infrastructure, and you can send it requests to perform work on the UI thread by calling its `_RunAsyn_` method
 
 
+The 
+  
 ##### the _slowMethod_ method implemented as an asynchronous method with the _async_ modifier and _await_ operators
 > ```C#
 > private async void slowMethod()
@@ -1802,6 +1804,7 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 >     message.Text = "Processing Complete";
 > }
 > ```
+
 
 
 #### 25. Implementing the user interface for a Universal Windows Platform app 实现通用Windows平台应用的用户界面
