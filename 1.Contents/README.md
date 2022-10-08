@@ -19,14 +19,14 @@
 ##### primitive data types
 | Data type | Description | Size(bits) | Range | Sample Usage |
 |-----------|-------------|------------|-------|--------------|
-| _int_     | Whole numbers(integers) | 32         | Range | int count; count = 42;
-| _long_    | Whole numbers(bigger range) | 64         | Range | Sample Usage |
-| _float_   | Floating-point numbers | 32         | Range | Sample Usage |
-| _double_  | Double-precision(more accurate) | 64         | Range | Sample Usage |
-| _decimal_ | Monetary values | 128        | Range | Sample Usage |
-| _string_  | Sequence of characters | 16 bits per character | Range | Sample Usage |
-| _char_    | Single character | 16         | Range | Sample Usage |
-| _bool_    | Boolean | 8          | Range | Sample Usage |
+| _int_     | Whole numbers(integers) | 32         | $-2^{31}$ through $2^{31}-1$ | `int count; count = 42;`
+| _long_    | Whole numbers(bigger range) | 64         | $-2^{63}$ through $2^{63}-1$ | `long wait; wait = 42L;` |
+| _float_   | Floating-point numbers | 32         | Range | `float away; away = 0.42F;` |
+| _double_  | Double-precision(more accurate) | 64         | $\pm$ | `double trouble; touble = 0.42;` |
+| _decimal_ | Monetary values | 128        | 28 significant figures | `decimal coin; coin = 0.42M;` |
+| _string_  | Sequence of characters | 16 bits per character | Not applicable | `string vest; vest = "forty two";` |
+| _char_    | Single character | 16         | 0 through $2^{16}-1$ | `char grill; grill = 'x';` |
+| _bool_    | Boolean | 8          | True or false | `bool teeth; teeth = false;` |
 
 ##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
