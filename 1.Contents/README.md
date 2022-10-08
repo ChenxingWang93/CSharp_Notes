@@ -1729,7 +1729,8 @@ if you invoke `slowMethod()` method from a piece of **UI code** e.g. _Click_ eve
 > }
 > ```
 
-#### the solution1⃣️: implement with `Task t` 👎
+#### the solution
+#### 1⃣️: implement with `Task t` 👎
 ##### make the _slowMethod_ method more responsive by using a _Task_ object to run the _doFirstLongRunningOperation_ method and define continuations for the same _Task_ that run the _doSecondLongRunningOperation_ and _doThirdLongRunningOperation_ methods in turn 
 > ```C#
 > private void slowMethod()
