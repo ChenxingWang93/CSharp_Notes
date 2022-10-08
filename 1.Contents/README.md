@@ -17,7 +17,7 @@
 
 ##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
 ##### primitive data types
-| Data type | Description | Size(bits) | Range | Sample Usage |
+| Data type数据类型 | Description描述 | Size(bits)大小 | Range范围 | Sample Usage用例 |
 |-----------|-------------|------------|-------|--------------|
 | _int_     | Whole numbers(integers) | 32         | $-2^{31}$ through $2^{31}-1$ | `int count; count = 42;`
 | _long_    | Whole numbers(bigger range) | 64         | $-2^{63}$ through $2^{63}-1$ | `long wait; wait = 42L;` |
