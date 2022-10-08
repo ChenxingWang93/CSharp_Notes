@@ -19,14 +19,14 @@
 ##### primitive data types
 | Data type | Description | Size(bits) | Range | Sample Usage |
 |-----------|-------------|------------|-------|--------------|
-| _int_     | Description | 32         | Range | Sample Usage |
-| _long_    | Description | 64         | Range | Sample Usage |
-| _float_   | Description | 32         | Range | Sample Usage |
-| _double_  | Description | 64         | Range | Sample Usage |
-| _decimal_ | Description | 128        | Range | Sample Usage |
-| _string_  | Description | 16 bits per character | Range | Sample Usage |
-| _char_    | Description | 16         | Range | Sample Usage |
-| _bool_    | Description | 8          | Range | Sample Usage |
+| _int_     | Whole numbers(integers) | 32         | Range | int count; count = 42;
+| _long_    | Whole numbers(bigger range) | 64         | Range | Sample Usage |
+| _float_   | Floating-point numbers | 32         | Range | Sample Usage |
+| _double_  | Double-precision(more accurate) | 64         | Range | Sample Usage |
+| _decimal_ | Monetary values | 128        | Range | Sample Usage |
+| _string_  | Sequence of characters | 16 bits per character | Range | Sample Usage |
+| _char_    | Single character | 16         | Range | Sample Usage |
+| _bool_    | Boolean | 8          | Range | Sample Usage |
 
 ##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
