@@ -4,18 +4,18 @@
 
 
 
-#### 2. Working with variables, operators, and expressions 变量、运算符、表达式
+#### 2. Working with variables, operators, and expressions //变量、运算符、表达式
 
-##### 2.1 Declare a variable 声明一个变量
+##### 2.1 Declare a variable //声明一个变量
 > Text is a set to be deleted
 
-##### 2.2 Declare a variable and give it an initial value 声明一个变量并赋予一个初始值
+##### 2.2 Declare a variable and give it an initial value //声明一个变量并赋予一个初始值
 > Text is a set to be deleted
 
-##### 2.3 Change the value of a variable 改变一个变量的值
+##### 2.3 Change the value of a variable //改变一个变量的值
 > Text is a set to be deleted
 
-##### 2.4 Generate a string representation of the value in a variable 将用`字符串`代表的值->`变量`代表的值
+##### 2.4 Generate a string representation of the value in a variable //将用`字符串`代表的值->`变量`代表的值
 ##### primitive data types
 | Data type数据类型 | Description描述 | Size(bits)大小 | Range范围 | Sample Usage用例 |
 |-----------|-------------|------------|-------|--------------|
@@ -28,7 +28,7 @@
 | _char_    | Single character | 16         | 0 through $2^{16}-1$ | `char grill; grill = 'x';` |
 | _bool_    | Boolean | 8          | True or false | `bool teeth; teeth = false;` |
 
-##### 2.5 Convert a `string` to an `int/double` 将 `string`转换为 `int/double`
+##### 2.5 Convert a `string` to an `int/double` //将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
 > 
 > 简言之 `int.Parse`and `double.Parse`
@@ -39,27 +39,27 @@
 > int thirdteen = int.Parse(strThirdteen);
 > ```
 
-##### 2.6 Override the precedence of an operator 覆盖运算符的优先级
+##### 2.6 Override the precedence of an operator //覆盖运算符的优先级
 > compute the value inside of the bracket
 > ```C#
 > (1 + 2) * 3
 > ```
 
-##### 2.7 Assign the same value to several variables 给多个变量赋相同的值
+##### 2.7 Assign the same value to several variables //给多个变量赋相同的值
 > the value is passed from right to left 赋值方向👈👈👈
 > ```C#
 > int myInt4, myInt3, myInt2, myInt1, myInt0;
 > myInt4 = myInt3 = myInt2 = myInt1 = myInt0 = 10;
 > ```
 
-##### 2.8 Increment or decrement a variables 增加或减少一个变量
+##### 2.8 Increment or decrement a variables //增加或减少一个变量
 > using `++` or `--`
 > 
 > e.g. `count++`
 
 
 
-#### 3. Writing methods and applying scope 书写方法✍️、应用范围
+#### 3. Writing methods and applying scope //书写方法✍️、应用范围
 ##### 3.1 Declare a method 声明一种方式
 > write inside the class
 > ```C#
@@ -76,7 +76,7 @@
 > }
 > ```
 
-##### 3.2 Return a value from within a method 从方法从回传一个值
+##### 3.2 Return a value from within a method //从方法从回传一个值
 > use keyword `return`
 > ```C#
 > int addValue (int topFace, int bottomFace) 
@@ -93,7 +93,7 @@
 > }
 > ```
 
-##### 3.3 Return multiple values from within a method 在一个方法中回传多个值
+##### 3.3 Return multiple values from within a method //在一个方法中回传多个值
 > return multiple values as a tuple 以多元组的形式回传多个值
 > ```C#
 > (int min, int max) FindMinMax(int[] input)
@@ -108,7 +108,7 @@
 > var (minimum, maximum) = FindMinMax(input);
 > ```
 
-##### 3.4 Return from a method before the end of the method 在一个方法结束前回传一个方法
+##### 3.4 Return from a method before the end of the method //在一个方法结束前回传一个方法
 > block ends at where `return` is 
 > ```C#
 > void PrintSomething()
@@ -120,7 +120,7 @@
 > }
 > ```
 
-##### 3.5 define an expression bodied method 定义一种表达式bodied方法
+##### 3.5 define an expression bodied method //定义一种表达式bodied方法
 > 简言之 replace`{}` and `return` with `=>`
 > ```C#
 > double CalculateStrength(double strengthtoWeight, int weight)
@@ -132,7 +132,7 @@
 > ```C#
 > double CalculateStrength(double strengthtoWeight, int weight) => strengthtoWeight * weight
 > ```
-##### 3.6 call a method call 一个方法
+##### 3.6 call a method //call 一个方法
 > be like `methodName(args0, args1, args2, ...);`
 > ```C#
 > addValues(1, 1);
