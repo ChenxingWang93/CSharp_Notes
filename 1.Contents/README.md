@@ -138,8 +138,8 @@
 > addValues(1, 1);
 > ```
 
-##### 3.7 Use the Generate Method Stub Wizard 方法存根向导
-##### 3.8 Create a nested method (method in method) 创建一个nested 
+##### 3.7 Use the Generate Method Stub Wizard //方法存根向导
+##### 3.8 Create a nested method (method in method) //创建一个nested 
 > obviously there is a method `strength` inside the method `CalculateStrength`
 > ```C#
 > long CalculateStrength(string input)
@@ -159,7 +159,7 @@
 > }
 > ```
 
-##### 3.9 display the debug toolbar 展示debug🔧
+##### 3.9 display the debug toolbar //展示debug🔧
 > View -> Toolbar - Debug
 
 ##### 3.10 Step into a method 
@@ -469,7 +469,7 @@
 > retrospectively, you can see `unbox` as way casting the generic type to specific type 
 > int i = (int)o;  
   
-##### 8.8 cast an object safely 安全地铸造一个对象
+##### 8.8 cast an object safely //安全地铸造一个对象
 > 1. first choice, use `is` keyword to check if the cast success 
 > ```C#
 > WrappedInt wi = new WrappedInt();
@@ -495,27 +495,27 @@
 
 
 
-#### 9. Creating value types with enumerations and structures 通过枚举、结构创建值的类型
+#### 9. Creating value types with enumerations and structures //通过枚举、结构创建值的类型
 bear in mind, the biggest difference between `struct` and `class` is that: **Structs are value type whereas Classes are reference type.** `struct`：值类型、`class`：参考类型
 
-##### 9.1 declare an enumeration 声明一个枚举
+##### 9.1 declare an enumeration //声明一个枚举
 > use the `enum` keyword => name of this `enum` => enumeration **literal** name
 > ```C#
 > enum Fruits{🍉，🥭，🍎，🍌，🍐，🥝}；  
 > ```  
 
-##### 9.2 declare a enumeration variable 声明一个枚举变量
+##### 9.2 declare a enumeration variable //声明一个枚举变量
 > ```C#
 > Fruits tropicalFruit;  
 > ``` 
 
-##### 9.3 declare a enumeration variable 赋一个枚举变量 一个值
+##### 9.3 declare a enumeration variable //赋一个枚举变量 一个值
 > ```C#
 > tropicalFruit = 🥭;  // error! the compiler cant detect what `🥭` is semantically
 > tropicalFruit = Fruits.🥭;  // √
 > ``` 
 
-##### 9.4 declare a structure type 声明一个结构类型
+##### 9.4 declare a structure type //声明一个结构类型
 > use the keyword `struct` => the name of the `struct` => the body of the `struct`(the constructors, methods, and fields).[similar to class]
 > ```C#
 > struct Point3d
@@ -530,12 +530,12 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 > }  
 > ```
 
-##### 9.5 declare a structure variable 声明一个结构化变量
+##### 9.5 declare a structure variable //声明一个结构化变量
 > ```C#
 > Point3d pt;  
 > ```
   
-##### 9.6 initialize a stucture variable to a value 初始化一个结构化变量并赋值
+##### 9.6 initialize a stucture variable to a value //初始化一个结构化变量并赋值
 > similar to `class`
 > ```C#
 > Point3d = new Point3d(0, 1, 2);  
@@ -543,42 +543,42 @@ bear in mind, the biggest difference between `struct` and `class` is that: **Str
 
 
 
-#### 10. Using arrays 阵列
+#### 10. Using arrays //阵列
 > what is the biggest difference between `Array` and `List`? `Array` is fixed size once it is initialized.`List` is dynamic, you can either `add` or`remove`items from it. 
 >
 
-##### 10.1 declare an array variable 声明一个 `array` 变量
+##### 10.1 declare an array variable //声明一个 `array` 变量
 > [data_type][name_of_array];
 > ```C# 
 > bool [] flags;
 > ``` 
 
-##### 10.2 **create an instance** of an array **创建**数组的**实例**
+##### 10.2 **create an instance** of an array //**创建**数组的**实例**
 > when you create an instance, you have to explicitly define the amount of the array. 当你创建一个实例，需要明确地定义数组的数量
 > ```C#  
 > bool [] flags = new bool[10];
 > ```
 
-##### 10.3 initialize the elements of an array to specific values 初始化元素数组声明值 
+##### 10.3 initialize the elements of an array to specific values //初始化元素数组声明值 
 > when you initialize the array, you have to assign specific values 初始化数组🔢，赋特定的值
 > ```C#   
 > int [] numPI = {3, 1, 4, 1, 5, 9};
 > ```  
   
-##### 10.4 find how many elements in an array 找到数组中元素的数量
+##### 10.4 find how many elements in an array //找到数组中元素的数量
 > use `Length` property
 > ```C#  
 > int[] numPI = {3, 1, 4, 1, 5, 9};
 > int numPIAmount = numPI.Length; // here we got 6
 > ```  
   
-##### 10.5 access a single array element 访问数组中的一个单一元素
+##### 10.5 access a single array element //访问数组中的一个单一元素
 > use the `[]` to access particular element 访问特定元素
 > ```C#   
 > int num = numPIAmount[2]; // we got 4
 > ```
 
-##### 10.6 loop over an array 循环一个数组
+##### 10.6 loop over an array //循环一个数组
 > use `for` loop or `foreach` loop
 > ```C#   
 > bool [] flags = {true, false, true, false};
@@ -822,7 +822,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 
-##### 13.3 `abstract` class which **can only be a base class** 抽象类只能成为基类
+##### 13.3 `abstract` class which **can only be a base class** //抽象类只能成为基类
 > use the abstract keyword. **you cannot create an instance from an abstract class**
 > then, what is the point to create an `abstract` class? ❓
 > it means to be **a template**. for instance, you define a class call `Felidae`, but `Felidae` should be treated as a family of mammals! There is no such instance of `Felidae` 一个模版，例如，定义一个**Felidae**类，但是**Felidae** 不能被当作**mammals**的族，不能出现`Felidae`这样的**实例**
@@ -850,7 +850,7 @@ the difference between **multidimensional array** and **jagged array** is that
 
 
 
-#### 14. Using garbage collection and resource management 垃圾回收♻️与资源管理
+#### 14. Using garbage collection and resource management //垃圾回收♻️与资源管理
 ##### 14.1 Write a destructor
 > use the `~` prefix. the method of destructor cannot have access modifier!(like `public`)
 > ```C#
@@ -863,14 +863,14 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 
-##### 14.2 call the destructor is invalid 不能call一个destructor
+##### 14.2 call the destructor is invalid //不能call一个destructor
 > you cannot call a destructor, only the garbage collector can call a destructor. 只有垃圾回收♻️才能call 一个destructor
-##### 14.3 ❌ force garbage collection(not recommended) 不建议 强制垃圾垃圾回收
+##### 14.3 ❌ force garbage collection(not recommended) //不建议 强制垃圾垃圾回收
 > ```C#
 > GC.Collect
 > ```
 
-##### 14.4 release a resource at a known point in time 在已知⌚️释放资源
+##### 14.4 release a resource at a known point in time //在已知⌚️释放资源
 > ⚠️ cons: this is at the risk of resource leaks if an exception interrupts the execution 如果异常中断执行则存在资源泄漏的风险
 > how to do it? => write a **disposal method** (a method that disposes of a resource) and **call it explicitly** from the program 写一个**处理方法**
 > (处理资源的方法),显式调用它
@@ -894,7 +894,7 @@ the difference between **multidimensional array** and **jagged array** is that
 > }  
 > ```
 
-##### 14.5 support exception-safe disposal in a class 在类中支持异常-安全🔐处理
+##### 14.5 support exception-safe disposal in a class //在类中支持异常-安全🔐处理
 > that said, to implement the `IDisposable` interface 
 > ```C#
 > class SafeResource : IDisposable
