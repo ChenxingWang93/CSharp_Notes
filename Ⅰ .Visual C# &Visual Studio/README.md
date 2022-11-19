@@ -19,14 +19,14 @@
 ##### primitive data types
 | Data type数据类型 | Description描述 | Size(bits)大小 | Range范围 | Sample Usage用例 |
 |-----------|-------------|------------|-------|--------------|
-| _int_     | Whole numbers(integers) | 32         | $-2^{31}$ through $2^{31}-1$ | `int count; count = 42;`
-| _long_    | Whole numbers(bigger range) | 64         | $-2^{63}$ through $2^{63}-1$ | `long wait; wait = 42L;` |
-| _float_   | Floating-point numbers | 32         | $-3.4 \times 10^{-38}$ through $3.4 \times 10^{38}$ | `float away; away = 0.42F;` |
-| _double_  | Double-precision(more accurate) | 64         | $\pm 5.0 \times 10^{-324}$ through $\pm 1.7 \times 10^{308}$ | `double trouble; touble = 0.42;` |
-| _decimal_ | Monetary values | 128        | 28 significant figures | `decimal coin; coin = 0.42M;` |
-| _string_  | Sequence of characters | 16 bits per character | Not applicable | `string vest; vest = "forty two";` |
+| _int_     | Whole numbers(integers) 整数| 32        32位| $-2^{31}$ through $2^{31}-1$ | `int count; count = 42;`
+| _long_    | Whole numbers(bigger range) 长整数| 64       64位| $-2^{63}$ through $2^{63}-1$ | `long wait; wait = 42L;` |
+| _float_   | Floating-point numbers  浮点数| 32       32位| $-3.4 \times 10^{-38}$ through $3.4 \times 10^{38}$ | `float away; away = 0.42F;` |
+| _double_  | Double-precision(more accurate) 双精度| 64       64位| $\pm 5.0 \times 10^{-324}$ through $\pm 1.7 \times 10^{308}$ | `double trouble; touble = 0.42;` |
+| _decimal_ | Monetary values | 128       128位| 28 significant figures | `decimal coin; coin = 0.42M;` |
+| _string_  | Sequence of characters | 16 bits per character        | Not applicable | `string vest; vest = "forty two";` |
 | _char_    | Single character | 16         | 0 through $2^{16}-1$ | `char grill; grill = 'x';` |
-| _bool_    | Boolean | 8          | True or false | `bool teeth; teeth = false;` |
+| _bool_    | Boolean 布尔| 8          | True or false | `bool teeth; teeth = false;` |
 
 ##### 2.5 Convert a `string` to an `int/double` //将 `string`转换为 `int/double`
 > Using `System.Int32.Parse` or `System.Double.Parse`
