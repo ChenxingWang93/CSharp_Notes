@@ -40,7 +40,7 @@
 > ```
 
 ##### 2.6 Override the precedence of an operator //覆盖运算符的优先级
-> compute the value inside of the bracket
+> compute the value inside of the bracket //优先计算括号里的内容
 > ```C#
 > (1 + 2) * 3
 > ```
