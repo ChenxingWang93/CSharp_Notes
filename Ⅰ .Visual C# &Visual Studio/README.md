@@ -141,13 +141,13 @@
 > ```
 
 ##### 3.7 Use the Generate Method Stub Wizard //方法存根向导
-##### 3.8 Create a nested method (method in method) //创建一个nested 
+##### 3.8 Create a nested method (method in method) //创建一个nested 的方法
 > obviously there is a method `strength` inside the method `CalculateStrength`
 > ```C#
-> long CalculateStrength(string input)
+> long CalculateStrength(string input)  //`CalculateStrength` 方法在` strength` 方法的外面
 > {
 >   /**/
->   long strength(int dataValue)
+>   long strength(int dataValue)  //`strength`方法在 `CalculateStrength` 方法的里面
 >   {
 >     if (dataValue == 1)
 >     {
