@@ -354,10 +354,10 @@
 ##### 7.2 Declare a `constructor` 声明一个构造器
 > write a method its name is the same as the name of the class, and it has no return type
 > ```C#
-> class Point
+> class Point //"Point"是class名
 > {
 >   //..place the field at here
->   public Point(int x, int y)
+>   public Point(int x, int y)  //"Point"是method名
 >   {
 >       //...
 >   }
