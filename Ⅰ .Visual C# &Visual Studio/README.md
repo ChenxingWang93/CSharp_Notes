@@ -184,15 +184,15 @@
 > View -> Toolbar - Debug
 
 
-##### 3.10 Step into a method 
+##### 3.10 Step into a method //进入一个方法
 
 
-##### 3.11 Step out of a method 
+##### 3.11 Step out of a method //走出一个方法
 
 
 ##### 3.12 Specify an optional parameter to a method 为方法指定可选参数
 > ```C#
-> void optMethod(int first, double second 1.0, string third ="Hello")
+> void optMethod(int first, double second 1.0, string third ="Hello") 
 > {
 >   /**/
 > }
